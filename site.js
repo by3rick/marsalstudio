@@ -1,4 +1,5 @@
 // Animaciones suaves al hacer scroll y carga inicial
+
 document.addEventListener('DOMContentLoaded', () => {
   const elements = document.querySelectorAll('.hero, .service');
 
@@ -17,4 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
     el.classList.add('invisible');
     observer.observe(el);
   });
+});
+
+// Mostrar scroll-top al bajar
+window.addEventListener('scroll', () => {
+  const scrollTopBtn = document.querySelector('.scroll-top');
+  if (window.scrollY > 200) {
+    scrollTopBtn.style.display = 'block';
+  } else {
+    scrollTopBtn.style.display = 'none';
+  }
 });
