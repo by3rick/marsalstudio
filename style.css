@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #111;
+  color: rgb(68, 31, 31);
+}
+
+.hero {
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: rgb(39, 52, 107);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+.hero h1,
+.hero p {
+  text-shadow: 2px 2px 4px #ffffff;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 60px 20px;
+  background-color: #1a1a1a;
+}
+
+.service {
+  flex: 1 1 300px;
+  max-width: 400px;
+  margin: 20px;
+  background-color: #222;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.service h2 {
+  color: rgb(39, 52, 107);
+}
+
+.service p {
+  color: white;
+}
+
+footer {
+  background-color: #000;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: rgb(29, 56, 173);
+  text-decoration: none;
+}
+
+/* Botones personalizados */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(39, 52, 107);
+  color: white !important;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgb(255 255 255);
+}
+
+/* Animaciones de entrada */
+.invisible {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive ajuste banner */
+@media (max-width: 480px) {
+  .hero {
+    padding: 60px 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+.navbar-nav .nav-link {
+  margin-left: 15px;
+  margin-right: 15px;
+}
