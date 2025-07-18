@@ -156,13 +156,4 @@ footer a {
     font-size: 1.8rem;
   }
 
-    .service h2 a {
-      color: rgb(39, 52, 107);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .service h2 a:hover {
-      color: white;
-    }
 }
