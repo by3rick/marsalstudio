@@ -6,6 +6,18 @@
   <title>Producción | Marsal Studio</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    /* Mantiene el estilo original del h2 con enlace */
+    .service h2 a {
+      color: rgb(39, 52, 107);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .service h2 a:hover {
+      color: white;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -42,33 +54,33 @@
     </nav>
   </header>
 
-  <section
-    class="hero"
-    style="background-image: url('https://www.avisualpro.es/wp-content/uploads/2022/11/blog-produccion.jpg');"
-  >
+  <section class="hero" style="background-image: url('https://www.avisualpro.es/wp-content/uploads/2022/11/blog-produccion.jpg');">
     <h1>Producción Audiovisual</h1>
     <p>Transformamos ideas en imágenes con calidad cinematográfica.</p>
   </section>
 
   <section class="services">
     <div class="service">
-      <h2>Spots Comerciales</h2>
+      <h2><a href="spots.html">Spots Comerciales</a></h2>
       <p>Creamos anuncios que atrapan, emocionan y venden, perfectos para redes sociales o televisión.</p>
     </div>
     <div class="service">
-      <h2>Videos Corporativos</h2>
+      <h2><a href="corporativos.html">Videos Corporativos</a></h2>
       <p>Contamos la historia de tu empresa de forma profesional para presentar tu marca al mundo.</p>
     </div>
     <div class="service">
-      <h2>Documentales</h2>
+      <h2><a href="documentales.html">Documentales</a></h2>
       <p>Producciones documentales que narran con emoción y profundidad cada historia que merece ser contada.</p>
     </div>
   </section>
+
+  <a href="#" class="scroll-top" title="Volver arriba">↑</a>
 
   <footer>
     <p>&copy; 2025 Marsal Studio & Erick Emilio Cisneros Marsal</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
