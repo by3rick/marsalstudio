@@ -36,13 +36,13 @@ html {
 .hero h1 {
   font-size: 3rem;
   color: rgb(39, 52, 107);
-  text-shadow: 2px 2px 4px #ffffff;
+  text-shadow: 1px 1px 2px #ffffff;
 }
 
 .hero p {
   font-size: 1.2rem;
   color: #ccc;
-  text-shadow: 2px 2px 4px #ffffff;
+  text-shadow: 1px 1px 2px #ffffff;
 }
 
 .services {
