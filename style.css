@@ -1,31 +1,132 @@
+/* Fuentes Bould ordenadas */
+@font-face {
+  font-family: 'Bould';
+  src: url('fonts/Bould-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bould';
+  src: url('fonts/Bould-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Bould';
+  src: url('fonts/Bould-ExtraLight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bould';
+  src: url('fonts/Bould-ExtraLightItalic.otf') format('opentype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Bould';
+  src: url('fonts/Bould-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bould';
+  src: url('fonts/Bould-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Bould';
+  src: url('fonts/Bould-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bould';
+  src: url('fonts/Bould-MediumItalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Bould';
+  src: url('fonts/Bould-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bould';
+  src: url('fonts/Bould-RegularItalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Bould';
+  src: url('fonts/Bould-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bould';
+  src: url('fonts/Bould-SemiBoldItalic.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Bould';
+  src: url('fonts/Bould-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bould';
+  src: url('fonts/Bould-ThinItalic.otf') format('opentype');
+  font-weight: 100;
+  font-style: italic;
+}
+
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #2e2d2d;
-  color: #f0f0f0;
+  background-color: #111;
+  color: #eee;
+font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-.navbar-nav .nav-link {
-  margin: 0 12px;
-}
-
+/* Navbar oscuro y texto claro */
 .navbar {
-  background-color: #212529 !important;
+  background-color: #1a1a1a !important;
 }
 
 .navbar-brand,
 .nav-link {
-  color: white !important;
+  color: #f5f5f5 !important;
 }
 
 .nav-link:hover {
-  color: rgb(173, 194, 255) !important;
+  color: #27426b !important;
 }
 
+.navbar-nav .nav-link {
+  margin: 0 12px;
+}
+
+/* Hero con títulos en azul y sombras */
 .hero {
   background-size: cover;
   background-position: center;
@@ -35,22 +136,25 @@ html {
 
 .hero h1 {
   font-size: 3rem;
-  color: rgb(173, 194, 255);
-  text-shadow: 1px 1px 2px #000000;
+  color: #27426b;
+  text-shadow: 1px 1px 3px #ddd;
+font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
 }
 
 .hero p {
   font-size: 1.2rem;
-  color: #eeeeee;
-  text-shadow: 1px 1px 2px #000000;
+  color: #ddd;
+  text-shadow: 2px 2px 5px #bbb;
+font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
 }
 
+/* Sección servicios con fondo oscuro y cards */
 .services {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 60px 20px;
-  background-color: #1a1a1a;
+  background-color: #111;
 }
 
 .service {
@@ -61,45 +165,57 @@ html {
   padding: 30px;
   border-radius: 10px;
   text-align: center;
-  color: #f0f0f0;
+  color: #eee;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
 }
 
 .service:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.35);
 }
 
 .service h2 {
-  color: rgb(173, 194, 255);
+  color: #27426b;
+font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
 }
 
+/* Footer oscuro */
 footer {
   background-color: #000;
-  color: #ccc;
+  color: #ddd;
   text-align: center;
   padding: 20px;
+font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
 }
 
 footer a {
-  color: rgb(109, 144, 255);
+  color: #1d38ad;
   text-decoration: none;
 }
 
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Botones personalizados */
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  color: white !important;
+  background-color: #27426b;
+  color: #fff !important;
   border-radius: 8px;
   text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
 }
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgb(255 255 255);
+  box-shadow: 0 5px 15px #fff;
 }
 
+/* Animaciones fade-in e invisibilidad */
 .invisible {
   opacity: 0;
   transform: translateY(30px);
@@ -107,21 +223,22 @@ footer a {
 }
 
 .fade-in {
-  opacity: 1;
+  opacity: 1 !important;
   transform: translateY(0);
 }
 
+/* Scroll top button */
 .scroll-top {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background-color: rgb(39, 52, 107);
-  color: white;
+  background-color: #27426b;
+  color: #fff;
   font-size: 1.5rem;
   padding: 10px 14px;
   border-radius: 50%;
   text-decoration: none;
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.5);
   display: none;
   z-index: 1000;
   transition: transform 0.3s ease;
@@ -130,63 +247,67 @@ footer a {
 .scroll-top:hover {
   transform: translateY(-4px);
 }
-.about-us {
-  background-color: #1a1a1a;
-  padding: 60px 20px;
-  text-align: center;
-}
 
-.about-us h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: rgb(39, 52, 107);
-}
-
-.about-us p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #ccc;
-  max-width: 800px;
-  margin: 0 auto;
-}
-.social-links {
-  margin-top: 10px;
-}
-.invisible {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-.hero, .service, .about-us {
-  opacity: 0;
-  transition: opacity 0.8s ease;
-}
-
-.fade-in {
-  opacity: 1;
-}
-
+/* Links sociales */
 .social-links a {
-  color: #ccc;
+  color: #ddd;
   text-decoration: none;
   margin: 0 8px;
   transition: color 0.3s ease;
+font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
 }
 
 .social-links a:hover {
-  color: rgb(173, 194, 255);
+  color: #27426b;
 }
 
+/* Sección about-us */
+.about-us {
+  background-color: #111;
+  color: #eee;
+  padding: 60px 20px;
+  text-align: center;
+font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
+}
+
+.about-us h2 {
+  color: #27426b;
+}
+
+/* Galería */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 20px;
+  background-color: #111;
+}
+
+.gallery-item {
+  max-width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #222;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.35);
+}
+
+/* Responsive para hero */
 @media (max-width: 480px) {
   .hero {
     padding: 60px 15px;
   }
-
   .hero h1 {
     font-size: 1.8rem;
   }
