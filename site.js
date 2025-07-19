@@ -1,7 +1,5 @@
-// Animaciones suaves al hacer scroll y carga inicial
-
 document.addEventListener('DOMContentLoaded', () => {
-  const elements = document.querySelectorAll('.hero, .service');
+  const elements = document.querySelectorAll('.hero, .service, .about-us, .fade-target');
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -10,22 +8,16 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.unobserve(entry.target);
       }
     });
-  }, {
-    threshold: 0.1
-  });
+  }, { threshold: 0.1 });
 
   elements.forEach(el => {
-    el.classList.add('invisible');
+
     observer.observe(el);
   });
 });
 
-// Mostrar scroll-top al bajar
 window.addEventListener('scroll', () => {
   const scrollTopBtn = document.querySelector('.scroll-top');
-  if (window.scrollY > 200) {
-    scrollTopBtn.style.display = 'block';
-  } else {
-    scrollTopBtn.style.display = 'none';
-  }
+  if (!scrollTopBtn) return;
+  scrollTopBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
 });
