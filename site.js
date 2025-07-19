@@ -2,11 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const elements = document.querySelectorAll('.hero, .service, .about-us, .fade-target, .gallery-item');
 
   const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
+    entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('fade-in');
-        entry.target.classList.remove('invisible');
-        observer.unobserve(entry.target);
+        const el = entry.target;
+        setTimeout(() => {
+          el.classList.add('fade-in', 'zoom-in');
+          el.classList.remove('invisible');
+          observer.unobserve(el);
+        }, index * 100); // delay tipo "staggered"
       }
     });
   }, {
@@ -23,5 +26,19 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('scroll', () => {
   const scrollTopBtn = document.querySelector('.scroll-top');
   if (scrollTopBtn) {
-    scrollTopBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
-  }});
+    if (window.scrollY > 200) {
+      scrollTopBtn.style.display = 'block';
+      scrollTopBtn.classList.add('bounce-in');
+    } else {
+      scrollTopBtn.style.display = 'none';
+      scrollTopBtn.classList.remove('bounce-in');
+    }
+  }
+});
+
+// Efecto sonoro al hacer clic (opcional)
+document.querySelector('.scroll-top')?.addEventListener('click', () => {
+  const audio = new Audio('https://cdn.pixabay.com/audio/2022/08/04/audio_8c95b3b3e8.mp3');
+  audio.volume = 0.3;
+  audio.play();
+});
