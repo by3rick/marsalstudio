@@ -4,22 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Marsal Studio | Fotografía y Producción Audiovisual</title>
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Fotógrafos Profesionales en Durango | Marsal Studio</title>
+  <meta name="description" content="Marsal Studio - Fotografía publicitaria y producción audiovisual en Durango. Capturamos tu esencia con calidad profesional. ¡Contacta hoy!" />
+  <meta name="keywords" content="fotógrafos Durango, fotografía publicitaria, producción audiovisual, estudio fotográfico Durango, fotos profesionales" />
+  <meta name="author" content="Erick Emilio Cisneros Marsal" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3 sticky-top">
       <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center fade-target" href="#">
-          <img
-            src="https://scontent.fpbc5-1.fna.fbcdn.net/v/t39.30808-6/505999016_122238024074018838_2468017673395765025_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=owYmIMaf8UEQ7kNvwGWLiOy&_nc_oc=Adla_0vSZFBaPdpTmjt1HrrAiAYSnyBIHLrRFWHbQNnfQkeZadrCDkKEKmCUFSjgM8JK0qdbl3SD0Fyp9o7OtVsT&_nc_zt=23&_nc_ht=scontent.fpbc5-1.fna&_nc_gid=N1Me4klGatoTBkBsFRg4xQ&oh=00_AfSKKqLqFi_HHL8vb9pMBhSl5T48Xydtn9zhPa-AZmJNeg&oe=687FBA4B"
-            alt="Logo Marsal Studio" height="40" class="me-2">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="https://scontent.fpbc5-1.fna.fbcdn.net/v/t39.30808-6/505999016_122238024074018838_2468017673395765025_n.jpg"
+            alt="Logo Marsal Studio" height="40" class="me-2" />
           Marsal Studio
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -28,9 +28,9 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link btn" href="produccion.html">Producción</a></li>
-            <li class="nav-item"><a class="nav-link btn" href="fotografia.html">Fotografía</a></li>
-            <li class="nav-item"><a class="nav-link btn" href="#nosotros">¿Quiénes somos?</a></li>
+            <li class="nav-item"><a class="nav-link btn" href="#produccion">Producción</a></li>
+            <li class="nav-item"><a class="nav-link btn" href="#fotografia">Fotografía</a></li>
+            <li class="nav-item"><a class="nav-link btn" href="#acerca-de">Acerca de</a></li>
             <li class="nav-item"><a class="nav-link btn" href="#contacto">Contacto</a></li>
           </ul>
         </div>
@@ -38,54 +38,96 @@
     </nav>
   </header>
 
-  <section class="hero"
-    style="background-image: url('https://scontent.fpbc5-1.fna.fbcdn.net/v/t39.30808-6/514336610_704025442629192_7758527463834064005_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=joF-CLUPCAIQ7kNvwHXxEQb&_nc_oc=AdlLWZHMqvlMIVYdYlYP8pzII1Is-rPWhG431KUyq-vl4BpyMzVN9GwAzvmWQkZbIv_BYebPHUVE1huWIZ4dsGbi&_nc_zt=23&_nc_ht=scontent.fpbc5-1.fna&_nc_gid=j6PPsTbaxTvbRBnWM5cr8Q&oh=00_AfTp0BnL_8kCBcfMjZxhrU8y0XVTeExWsVvdxJ0-jn0A6w&oe=687FB977');">
-    <h1>Producción Audiovisual y Fotografía Publicitaria</h1>
-    <p>Capturamos tu esencia, transmitimos tu mensaje</p>
+  <section class="hero text-white text-center d-flex flex-column justify-content-center align-items-center"
+    style="background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover; height: 90vh;">
+    <h1 class="display-4 fw-bold shadow-text">Fotógrafos Profesionales en Durango</h1>
+    <p class="lead shadow-text">Capturamos momentos únicos con calidad cinematográfica y creatividad.</p>
+    <a href="#contacto" class="btn btn-primary btn-lg mt-3">Reserva tu sesión ahora</a>
   </section>
 
-  <section class="services" id="servicios">
-    <div class="service">
-      <h2>Producción Audiovisual</h2>
-      <p>Videos profesionales con calidad cinematográfica para promocionar tu marca o contar tu historia.</p>
-      <a href="produccion.html" class="btn btn-service">Más información</a>
-    </div>
-    <div class="service">
-      <h2>Fotografía Publicitaria</h2>
-      <p>Imágenes impactantes que venden, enamoran y comunican lo mejor de tus productos o servicios.</p>
-      <a href="fotografia.html" class="btn btn-service">Más información</a>
-    </div>
-  </section>
+  <main class="container my-5">
 
-  <!-- Sección ¿Quiénes somos? -->
-  <section class="about-us fade-target" id="nosotros">
-    <div class="container text-center py-5">
-      <h2 class="mb-4">¿Quiénes somos?</h2>
-      <p>
-        En <strong>Marsal Studio</strong> somos un equipo apasionado por contar historias que conectan, inspiran y venden.
-        Combinamos la creatividad con la técnica para ofrecer servicios de <strong>fotografía publicitaria</strong> y
-        <strong>producción audiovisual</strong> de alto impacto. Nuestro objetivo es convertir tus ideas en imágenes que hablen por sí solas.
+    <section id="produccion" class="mb-5">
+      <h2 class="text-center mb-4">Producción Audiovisual en Durango</h2>
+      <p class="lead text-center">Creamos videos y spots publicitarios que elevan tu marca con impacto visual y emoción. Nuestro equipo combina creatividad y tecnología para dar vida a tus ideas.</p>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=600&q=80" alt="Producción audiovisual"
+            class="img-fluid rounded shadow" />
+        </div>
+        <div class="col-md-6 d-flex align-items-center">
+          <a href="produccion.html" class="btn btn-outline-primary btn-lg w-100">Más información</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="fotografia" class="mb-5">
+      <h2 class="text-center mb-4">Fotografía Publicitaria en Durango</h2>
+      <p class="lead text-center">Fotos profesionales para que tus productos y servicios brillen. Desde fotografía para redes sociales hasta catálogos impresos, tenemos la experiencia para lograrlo.</p>
+      <div class="row">
+        <div class="col-md-6 order-md-2">
+          <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=600&q=80" alt="Fotografía publicitaria"
+            class="img-fluid rounded shadow" />
+        </div>
+        <div class="col-md-6 d-flex align-items-center order-md-1">
+          <a href="fotografia.html" class="btn btn-outline-primary btn-lg w-100">Más información</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="acerca-de" class="mb-5">
+      <h2 class="text-center mb-4">¿Quiénes Somos?</h2>
+      <p class="text-center mx-auto" style="max-width: 700px;">
+        En <strong>Marsal Studio</strong> somos un equipo apasionado por contar historias a través de imágenes y videos con estilo profesional y creativo. Nos dedicamos a capturar momentos auténticos que conectan con tu audiencia y potencian tu marca.
       </p>
-    </div>
-  </section>
+      <p class="text-center mx-auto" style="max-width: 700px;">
+        Ubicados en Durango, combinamos experiencia, tecnología de punta y una mirada artística para entregar siempre un resultado que supera expectativas.
+      </p>
+    </section>
 
-  <!-- Botón Scroll Arriba -->
-  <a href="#" class="scroll-top" title="Volver arriba">↑</a>
+  </main>
 
-  <!-- Footer -->
-  <footer id="contacto" class="fade-target">
+  <footer id="contacto" class="bg-dark text-white text-center p-4">
+    <h3>Contacto</h3>
     <p><strong>Ubicación:</strong> Durango, México</p>
-    <p><strong>Cotizaciones:</strong> 618 163 3200 | +52 1 614 533 2157</p>
-    <p><strong>Email:</strong> <a href="mailto:marsalcine@gmail.com">marsalcine@gmail.com</a></p>
-    <div class="social-links">
-      <a href="https://www.facebook.com/profile.php?id=61550565143966&locale=es_LA" target="_blank">Facebook</a> |
-      <a href="https://www.instagram.com/marsal.studio/" target="_blank">Instagram</a>
+    <p><strong>Teléfonos:</strong> 618 163 3200 | +52 1 614 533 2157</p>
+    <p><strong>Email:</strong> <a href="mailto:marsalcine@gmail.com" class="text-white">marsalcine@gmail.com</a></p>
+    <div class="social-links mb-3">
+      <a href="https://www.facebook.com/profile.php?id=61550565143966" target="_blank" class="text-white me-2">Facebook</a>
+      <a href="https://www.instagram.com/marsal.studio/" target="_blank" class="text-white">Instagram</a>
     </div>
     <p>&copy; 2025 Marsal Studio <br> Sitio Web Creado y proporcionado por Erick Emilio Cisneros Marsal</p>
   </footer>
 
-</body>
-  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="site.js"></script>
+
+  <style>
+    /* Sombra para texto hero para que contraste */
+    .shadow-text {
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    }
+
+    /* Botón más grande y llamativo */
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+      font-weight: 700;
+      font-size: 1.25rem;
+      padding: 0.75rem 1.5rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+
+    /* Footer estilo */
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+</body>
+
 </html>
