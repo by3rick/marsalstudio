@@ -391,115 +391,118 @@ font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lig
 }
 #contacto-form {
   background-color: var(--bg-base);
-  padding: 40px 20px;
+  padding: 40px 30px;
   color: var(--text-light);
   max-width: 600px;
   margin: 40px auto;
-  border-radius: 10px;
+  border-radius: 12px;
   font-family: 'Bould', sans-serif;
-  box-shadow: 0 0 15px rgba(109, 144, 255, 0.4);
+  box-shadow: 0 4px 25px rgba(109, 144, 255, 0.35);
+  display: none;
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.4s ease;
+  transform: translateY(-20px);
+  will-change: opacity, transform;
+}
+
+#contacto-form.visible {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 #contacto-form h2 {
   color: var(--accent-blue);
   text-align: center;
-  margin-bottom: 25px;
-  font-weight: 600;
+  margin-bottom: 30px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  font-size: 2rem;
 }
 
 #contacto-form label {
   display: block;
-  margin-bottom: 6px;
-  font-weight: 500;
+  margin-bottom: 8px;
+  font-weight: 600;
   color: var(--text-soft);
+  user-select: none;
 }
 
 #contacto-form input,
 #contacto-form textarea {
   width: 100%;
-  padding: 12px 15px;
-  border-radius: 8px;
+  padding: 14px 18px;
+  border-radius: 10px;
   border: none;
   background-color: var(--bg-soft);
   color: var(--text-light);
   font-size: 1rem;
   font-family: 'Bould', sans-serif;
   resize: vertical;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.7);
 }
 
 #contacto-form input::placeholder,
 #contacto-form textarea::placeholder {
   color: var(--text-muted);
-  font-weight: 300;
+  font-weight: 400;
+  font-style: italic;
 }
 
 #contacto-form input:focus,
 #contacto-form textarea:focus {
   outline: none;
   background-color: #2a2a3a;
-  box-shadow: 0 0 8px var(--accent-blue);
+  box-shadow: 0 0 12px var(--accent-blue);
   color: var(--text-light);
+  transition: box-shadow 0.3s ease;
 }
 
 #contacto-form button {
   display: block;
-  margin: 20px auto 0 auto; /* margen arriba 20px y centrado horizontal */
+  margin: 30px auto 0 auto;
   background-color: var(--marsal-red);
   color: white;
   border: none;
-  padding: 14px 0;
-  width: 150px; /* ancho fijo para que quede bonito */
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 1.1rem;
+  padding: 16px 0;
+  width: 180px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 1.2rem;
   cursor: pointer;
   font-family: 'Bould', sans-serif;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-#contacto-form button:hover {
-  background-color: #cc0707; /* un rojo un poco más oscuro para hover */
-  box-shadow: 0 0 15px var(--marsal-red);
-}
-#contacto-form {
-  display: none; /* oculto por defecto */
-  opacity: 0;
-  transition: opacity 0.5s ease;
+  letter-spacing: 0.7px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(109, 144, 255, 0.5);
 }
 
-#contacto-form.visible {
-  display: block;
-  opacity: 1;
-}/* Botón para mostrar el formulario centrado */
+#contacto-form button:hover {
+  background-color: #cc0707;
+  box-shadow: 0 0 20px var(--marsal-red);
+  transform: scale(1.05);
+}
+
 #mostrar-contacto {
   display: block;
-  margin: 30px auto; /* margen arriba/abajo y centrado horizontal */
-  width: 150px;
+  margin: 40px auto;
+  width: 180px;
   background-color: var(--marsal-red);
   color: white;
   border: none;
-  padding: 14px 0;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 1.1rem;
+  padding: 16px 0;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 1.2rem;
   cursor: pointer;
   font-family: 'Bould', sans-serif;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  letter-spacing: 0.7px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 15px rgba(109, 144, 255, 0.6);
 }
 
-/* Botón enviar centrado dentro del formulario */
-#contacto-form button {
-  display: block;
-  margin: 20px auto 0 auto;
-  width: 150px;
-  background-color: var(--marsal-red);
-  color: white;
-  border: none;
-  padding: 14px 0;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 1.1rem;
-  cursor: pointer;
-  font-family: 'Bould', sans-serif;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+#mostrar-contacto:hover {
+  background-color: #cc0707;
+  box-shadow: 0 0 20px var(--marsal-red);
+  transform: scale(1.05);
 }

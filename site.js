@@ -42,11 +42,34 @@ document.querySelector('.scroll-top')?.addEventListener('click', () => {
   audio.volume = 0.3;
   audio.play();
 });
-document.getElementById('mostrar-contacto').addEventListener('click', function() {
-  const form = document.getElementById('contacto-form');
-  form.classList.toggle('visible');
-  // Para que al mostrar el form, haga scroll suave hasta ahí:
-  if(form.classList.contains('visible')) {
-    form.scrollIntoView({ behavior: 'smooth' });
-  }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const btnMostrar = document.getElementById('mostrar-contacto');
+  const formContacto = document.getElementById('contacto-form');
+
+  btnMostrar.addEventListener('click', () => {
+    formContacto.classList.toggle('visible');
+    if (formContacto.classList.contains('visible')) {
+      formContacto.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+
+  formContacto.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Formulario enviado, pero esta parte la debes implementar.');
+    formContacto.reset();
+    formContacto.classList.remove('visible');
+  });
 });
+
+(function(){
+  emailjs.init('TU_USER_ID_AQUI'); // Aquí va tu User ID de EmailJS
+})();
+
+document.getElementById('contacto-form').addEventListener('submit', function(event){
+  event.preventDefault();
+  emailjs.sendForm('TU_SERVICE_ID', 'TU_TEMPLATE_ID', this)
+    .then(() => alert('Correo enviado con éxito 🚀'))
+    .catch(err => alert('Error al enviar: ' + JSON.stringify(err)));
+});
+
