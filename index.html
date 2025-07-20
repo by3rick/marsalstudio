@@ -61,7 +61,7 @@
       <a href="fotografia.html" class="btn btn-service">Más información</a>
     </div>
   </section>
-
+  
   <!-- Sección ¿Quiénes somos? -->
   <section class="about-us fade-target" id="nosotros">
     <div class="container text-center py-5">
@@ -73,7 +73,22 @@
       </h>
     </div>
   </section>
+  <button id="mostrar-contacto" class="btn">Contacto</button>
+<section id="contacto-form" class="fade-target">
+  <h2>Contacto</h2>
+  <form action="#" method="POST">
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
 
+    <label for="email">Correo electrónico</label>
+    <input type="email" id="email" name="email" placeholder="tu@correo.com" required />
+
+    <label for="mensaje">Mensaje</label>
+    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí" required></textarea>
+
+    <button type="submit">Enviar</button>
+  </form>
+</section>
   <!-- Botón Scroll Arriba -->
   <a href="#" class="scroll-top" title="Volver arriba">↑</a>
 

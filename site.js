@@ -42,3 +42,11 @@ document.querySelector('.scroll-top')?.addEventListener('click', () => {
   audio.volume = 0.3;
   audio.play();
 });
+document.getElementById('mostrar-contacto').addEventListener('click', function() {
+  const form = document.getElementById('contacto-form');
+  form.classList.toggle('visible');
+  // Para que al mostrar el form, haga scroll suave hasta ahí:
+  if(form.classList.contains('visible')) {
+    form.scrollIntoView({ behavior: 'smooth' });
+  }
+});
