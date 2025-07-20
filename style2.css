@@ -123,7 +123,7 @@ html {
 /* Navbar oscuro y texto claro */
 .navbar {
   background-color: var(--marsal-dark) !important;
-} 
+}
 
 .navbar-brand,
 .nav-link {
@@ -131,7 +131,7 @@ html {
 }
 
 .nav-link:hover {
-      color:var(--accent-blue);
+  color: var(--accent-blue);
 }
 
 .navbar-nav .nav-link {
@@ -148,16 +148,16 @@ html {
 
 .hero h1 {
   font-size: 3rem;
-      color:var(--accent-blue);
+  color: var(--accent-blue);
   text-shadow: 1px 1px 3px #444;
-font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
+  font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
 }
 
 .hero p {
   font-size: 1.2rem;
   color: var(--text-soft);
   text-shadow: 2px 2px 4px #666;
-font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
+  font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
 }
 
 /* Sección servicios con fondo oscuro y cards */
@@ -173,13 +173,13 @@ font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lig
   flex: 1 1 300px;
   max-width: 400px;
   margin: 20px;
-  background-color:var(--bg-soft);
+  background-color: var(--bg-soft);
   padding: 30px;
   border-radius: 10px;
   text-align: center;
   color: var(--text-light);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
+  font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
 }
 
 .service:hover {
@@ -188,8 +188,18 @@ font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lig
 }
 
 .service h2 {
-      color:var(--accent-blue);
-font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
+  color: var(--accent-blue);
+  font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
+}
+
+.service h2 a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.service h2 a:hover {
+  color: var(--text-light);
 }
 
 /* Footer oscuro */
@@ -198,12 +208,12 @@ footer {
   color: var(--text-muted);
   text-align: center;
   padding: 20px;
-font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
+  font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
 }
 
 footer a {
-      color:var(--accent-blue);
-  text-decoration: none; 
+  color: var(--accent-blue);
+  text-decoration: none;
 }
 
 footer a:hover {
@@ -214,13 +224,12 @@ footer a:hover {
 .btn {
   display: inline-block;
   padding: 10px 20px;
-      color: #6d90ff;
   color: #fff !important;
   border-radius: 8px;
   text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: var(--marsal-red);
-font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
+  font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
 }
 
 .btn:hover {
@@ -245,7 +254,6 @@ font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lig
   position: fixed;
   bottom: 30px;
   right: 30px;
-      color: #6d90ff;
   color: #fff;
   background-color: var(--marsal-red);
   font-size: 1.5rem;
@@ -262,93 +270,6 @@ font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lig
   transform: translateY(-4px);
 }
 
-/* Links sociales */
-.social-links a {
-  color: #ddd;
-  text-decoration: none;
-  margin: 0 8px;
-  transition: color 0.3s ease;
-font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
-}
-
-.social-links a:hover {
-  color: var(--accent-blue);
-} 
-
-/* Sección about-us */
-.about-us {
-  background-color: var(--bg-base);
-  color: var(--text-light);
-  padding: 60px 20px;
-  text-align: center;
-font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
-}
-
-.about-us h2 {
- color: var(--accent-blue);
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px 20px;
-    background-color: var(--bg-base);
-  }
-  .gallery-item {
-    position: relative;
-    width: 300px;
-    height: 225px; /* 4:3 ratio */
-    border-radius: 12px;
-    overflow: hidden;
-    background-color: var(--bg-soft);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    padding: 15px;
-    text-align: center;
-  }
-  .gallery-item img {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    z-index: 0;
-    filter: brightness(0.5);
-  }
-  .gallery-item .big-text {
-    position: relative;
-    z-index: 1;
-    font-size: clamp(1.4rem, 5vw, 2rem);
-    font-weight: 700;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
-    color: white;
-  }
-  .gallery-item .small-text {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    right: 15px;
-    font-size: 0.9rem;
-    opacity: 0.85;
-    white-space: normal;
-    color: #ddd;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
-    z-index: 1;
-  }
-  .gallery-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
-  }
-
 /* Responsive para hero */
 @media (max-width: 480px) {
   .hero {
@@ -357,25 +278,4 @@ font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lig
   .hero h1 {
     font-size: 1.8rem;
   }
-}
-/* Extra animaciones */
-.zoom-in {
-  transform: scale(1);
-  opacity: 1;
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-}
-
-.invisible {
-  opacity: 0;
-  transform: scale(0.95);
-}
-
-.bounce-in {
-  animation: bounce-in 0.6s ease;
-}
-
-@keyframes bounce-in {
-  0% { transform: scale(0.8); }
-  60% { transform: scale(1.05); }
-  100% { transform: scale(1); }
 }

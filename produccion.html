@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Producción | Marsal Studio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <style>
+  <link rel="stylesheet" href="style2.css" />
+    <style>
     /* Link de servicios */
     .service h2 a {
       color: #6d90ff;
@@ -19,48 +19,12 @@
       color: white;
     }
 
-    /* Botones navbar personalizados */
-    .navbar-nav .nav-link.btn {
-      background-color: transparent;
-      color: #eee !important;
-      margin: 0 8px;
-      border-radius: 8px;
-      padding: 6px 12px;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      font-family: 'Bould', sans-serif;
-    }
-
-    .navbar-nav .nav-link.btn:hover {
-      background-color: #27426b;
-      color: #fff !important;
-    }
-
-    /* Scroll top botón */
-    .scroll-top {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background-color: #27426b;
-      color: #fff;
-      font-size: 1.5rem;
-      padding: 10px 14px;
-      border-radius: 50%;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.5);
-      display: none;
-      z-index: 1000;
-      transition: transform 0.3s ease;
-    }
-
-    .scroll-top:hover {
-      transform: translateY(-4px);
-    }
   </style>
 </head>
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+ <nav class="navbar navbar-expand-lg navbar-dark px-3">
       <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center" href="index.html">
           <img src="https://scontent.fpbc5-1.fna.fbcdn.net/v/t39.30808-6/519505898_705288845836185_1023547191803377491_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ZH0Vfo6Ui5AQ7kNvwFGnpT5&_nc_oc=Adk4vWSyMOlOiMPDVk2oVEhT3B-w8l-Ch3TMmT0KnA3QQD2WnmyxMR7LV8WnF2jEvmj9c9SbJl3FW21CRDEYAMxR&_nc_zt=23&_nc_ht=scontent.fpbc5-1.fna&_nc_gid=p74RzI6UUuuTdujgXiSUUw&oh=00_AfS5pgxUbQOvmYrEihe1D-lR5oHdQJ8IU3nS9X0Sov1LtA&oe=6881DCBA"
@@ -82,18 +46,17 @@
     </nav>
   </header>
 
-  <section class="hero"
-    style="background-image: url('https://www.avisualpro.es/wp-content/uploads/2022/11/blog-produccion.jpg');">
+  <section class="hero" style="background-image: url('https://www.avisualpro.es/wp-content/uploads/2022/11/blog-produccion.jpg');">
     <h1>Producción Audiovisual</h1>
     <p>Transformamos ideas en imágenes con calidad cinematográfica.</p>
   </section>
 
   <section class="services container my-5 d-flex flex-wrap justify-content-center gap-4">
-    <div class="service p-4 rounded shadow-sm" style="max-width: 400px; background-color:#222;">
+    <div class="service p-4 rounded shadow-sm">
       <h2><a href="spots.html">Spots Comerciales</a></h2>
       <p>Creamos anuncios que atrapan, emocionan y venden, perfectos para redes sociales o televisión.</p>
     </div>
-    <div class="service p-4 rounded shadow-sm" style="max-width: 400px; background-color:#222;">
+    <div class="service p-4 rounded shadow-sm">
       <h2><a href="corporativos.html">Videos Corporativos</a></h2>
       <p>Contamos la historia de tu empresa de forma profesional para presentar tu marca al mundo.</p>
     </div>
@@ -109,23 +72,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="site.js"></script>
 
-  <script>
-    // Mostrar botón scroll-top solo cuando haces scroll
-    const scrollTopBtn = document.querySelector('.scroll-top');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 200) {
-        scrollTopBtn.style.display = 'block';
-      } else {
-        scrollTopBtn.style.display = 'none';
-      }
-    });
-
-    // Scroll suave al hacer click en scroll-top
-    scrollTopBtn.addEventListener('click', e => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
 </body>
 
 </html>
