@@ -7,111 +7,319 @@
   <title>Fotografía | Marsal Studio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --bg-dark: #121212;
+      --text-light: #eaeaea;
+      --nav-bg: #000000;
+      --btn-red: #ff3b3f;
+      --btn-red-hover: #c62828;
+      --card-bg: rgba(255, 255, 255, 0.06);
+      --card-border: rgba(255, 255, 255, 0.15);
+      --text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.85);
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      font-family: 'Bould', sans-serif;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      background-color: var(--nav-bg);
+    }
+
+    .hero {
+      background-size: cover;
+      background-position: center;
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: var(--text-shadow);
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-weight: 700;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 3rem auto;
+      max-width: 1200px;
+      padding: 0 1rem;
+    }
+
+    .service {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
+      flex: 1 1 250px;
+      max-width: 300px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service:hover,
+    .service:focus-within {
+      transform: translateY(-6px);
+      border-color: var(--btn-red);
+      box-shadow: 0 10px 20px rgba(255, 59, 63, 0.4);
+      outline: none;
+    }
+
+    .service h2 a {
+      color: #17a2b8;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.5rem;
+      display: inline-block;
+      margin-bottom: 0.75rem;
+      transition: color 0.3s ease;
+    }
+
+    .service h2 a:hover,
+    .service h2 a:focus {
+      color: var(--btn-red);
+      outline: none;
+      text-decoration: underline;
+    }
+
+    .gallery {
+      padding: 4rem 0;
+      background: #1a1a1a;
+    }
+
+    .gallery h2 {
+      color: var(--text-light);
+      text-align: center;
+      margin-bottom: 3rem;
+      font-weight: 700;
+      font-size: 2.5rem;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery-item img:hover,
+    .gallery-item img:focus {
+      transform: scale(1.05);
+      outline: none;
+    }
+
+    .gallery-text {
+      margin-top: 0.75rem;
+      text-align: center;
+    }
+
+    .gallery-text h5 {
+      font-weight: 700;
+      color: var(--text-light);
+      margin-bottom: 0.3rem;
+    }
+
+    .gallery-text p {
+      font-size: 0.875rem;
+      color: #bbb;
+      margin: 0;
+    }
+
+    .scroll-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--btn-red);
+      color: white;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 1.8rem;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      box-shadow: 0 6px 15px rgba(255, 59, 63, 0.6);
+      cursor: pointer;
+      transition: background 0.3s ease;
+      user-select: none;
+      border: none;
+    }
+
+    .scroll-top:hover,
+    .scroll-top:focus {
+      background: var(--btn-red-hover);
+      outline: none;
+      text-decoration: none;
+    }
+
+    .quote-section {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      padding: 6rem 1rem;
+      text-align: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: 700;
+      background-image: url('https://images.unsplash.com/photo-1488371934083-edb7857977df');
+      text-shadow: var(--text-shadow);
+      user-select: none;
+      letter-spacing: 1.2px;
+      max-width: 900px;
+      margin: 3rem auto;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.7);
+    }
+
+    footer {
+      background-color: var(--nav-bg);
+      color: #ddd;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      user-select: none;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .services {
+        gap: 1rem;
+      }
+
+      .service {
+        max-width: 100%;
+      }
+
+      .quote-section {
+        font-size: 1.5rem;
+        padding: 3rem 1rem;
+      }
+    }
+  </style>
 </head>
 
-<body>
+<body class="bould-font">
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark" role="navigation" aria-label="Menú principal">
       <div class="container-fluid px-3">
         <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <img
-            src="https://scontent.fpbc5-1.fna.fbcdn.net/v/t39.30808-6/519505898_705288845836185_1023547191803377491_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ZH0Vfo6Ui5AQ7kNvwFGnpT5&_nc_oc=Adk4vWSyMOlOiMPDVk2oVEhT3B-w8l-Ch3TMmT0KnA3QQD2WnmyxMR7LV8WnF2jEvmj9c9SbJl3FW21CRDEYAMxR&_nc_zt=23&_nc_ht=scontent.fpbc5-1.fna&_nc_gid=p74RzI6UUuuTdujgXiSUUw&oh=00_AfS5pgxUbQOvmYrEihe1D-lR5oHdQJ8IU3nS9X0Sov1LtA&oe=6881DCBA"
-            alt="Logo Marsal Studio" height="40" class="me-2" />
+          <img src="https://scontent.fpbc5-1.fna.fbcdn.net/v/t39.30808-6/519505898_705288845836185_1023547191803377491_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ZH0Vfo6Ui5AQ7kNvwFGnpT5&_nc_oc=Adk4vWSyMOlOiMPDVk2oVEhT3B-w8l-Ch3TMmT0KnA3QQD2WnmyxMR7LV8WnF2jEvmj9c9SbJl3FW21CRDEYAMxR&_nc_zt=23&_nc_ht=scontent.fpbc5-1.fna&_nc_gid=p74RzI6UUuuTdujgXiSUUw&oh=00_AfS5pgxUbQOvmYrEihe1D-lR5oHdQJ8IU3nS9X0Sov1LtA&oe=6881DCBA" alt="Logo Marsal Studio" height="40" class="me-2" />
           Marsal Studio
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link btn" href="index.html">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link btn" href="produccion.html">Producción</a></li>
-            <li class="nav-item"><a class="nav-link btn" href="index.html#contacto">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link btn" href="index.html" role="link" aria-current="page">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link btn" href="produccion.html" role="link">Producción</a></li>
+            <li class="nav-item"><a class="nav-link btn" href="#contacto" role="link">Contacto</a></li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
 
-  <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1504196606672-aef5c9cefc92');">
-    <h1>Fotografía Publicitaria</h1>
-    <p>Capturamos lo mejor de tus productos y servicios en una imagen.</p>
-  </section>
+  <main>
+    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1504196606672-aef5c9cefc92');" role="banner" aria-label="Fotografía Publicitaria">
+      <h1>Fotografía Publicitaria</h1>
+      <p>Capturamos lo mejor de tus productos y servicios en una imagen.</p>
+    </section>
 
-  <section class="services">
-    <div class="service">
-      <h2>Producto</h2>
-      <p>Fotografías limpias y creativas que destacan cada detalle de tus productos.</p>
-    </div>
-    <div class="service">
-      <h2>Moda y Modelaje</h2>
-      <p>Sesiones fotográficas con estilo profesional para catálogos, revistas y redes sociales.</p>
-    </div>
-    <div class="service">
-      <h2>Eventos Empresariales</h2>
-      <p>Capturamos momentos clave en eventos corporativos con estilo documental.</p>
-    </div>
-  </section>
+    <section class="quote-section" aria-label="Frase inspiradora">
+      Cada imagen cuenta una historia... Nosotros contamos la tuya.
+    </section>
 
-  <section class="gallery py-5">
-    <div class="container">
-      <h2 class="text-center mb-5">Ejemplos de nuestro trabajo publicitario</h2>
-      <div class="row g-4 justify-content-center">
+    <section class="services container" aria-label="Servicios de fotografía">
+      <article class="service" tabindex="0">
+        <h2><a href="producto.html" class="text-decoration-none" tabindex="-1">Producto</a></h2>
+        <p>Fotografías limpias y creativas que destacan cada detalle de tus productos.</p>
+      </article>
+      <article class="service" tabindex="0">
+        <h2><a href="moda.html" class="text-decoration-none" tabindex="-1">Moda y Modelaje</a></h2>
+        <p>Sesiones fotográficas con estilo profesional para catálogos, revistas y redes sociales.</p>
+      </article>
+      <article class="service" tabindex="0">
+        <h2><a href="eventos.html" class="text-decoration-none" tabindex="-1">Eventos Empresariales</a></h2>
+        <p>Capturamos momentos clave en eventos corporativos con estilo documental.</p>
+      </article>
+    </section>
 
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
-          <div class="gallery-item w-100">
-            <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=400&q=80"
-              alt="Ejemplo 1" />
-            <div class="gallery-text text-center">
-              <h5>Producto destacado</h5>
-              <p class="small text-muted">Fotografía limpia y detallada para tu producto.</p>
+    <section class="gallery" aria-label="Galería de ejemplos fotográficos">
+      <div class="container">
+        <h2>Ejemplos de nuestro trabajo publicitario</h2>
+        <div class="row g-4 justify-content-center">
+          <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
+            <div class="gallery-item w-100" tabindex="0" role="group" aria-label="Producto destacado">
+              <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=400&q=80"
+                alt="Producto destacado, fotografía limpia y detallada" />
+              <div class="gallery-text">
+                <h5>Producto destacado</h5>
+                <p>Fotografía limpia y detallada para tu producto.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
+            <div class="gallery-item w-100" tabindex="0" role="group" aria-label="Moda profesional">
+              <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=400&q=80"
+                alt="Modelo en sesión de moda profesional" />
+              <div class="gallery-text">
+                <h5>Moda profesional</h5>
+                <p>Estilo y elegancia para tu marca.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
+            <div class="gallery-item w-100" tabindex="0" role="group" aria-label="Evento empresarial">
+              <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=400&q=80"
+                alt="Evento empresarial capturado con estilo documental" />
+              <div class="gallery-text">
+                <h5>Evento empresarial</h5>
+                <p>Momentos clave capturados profesionalmente.</p>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
-          <div class="gallery-item w-100">
-            <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=400&q=80"
-              alt="Ejemplo 2" />
-            <div class="gallery-text text-center">
-              <h5>Moda y estilo</h5>
-              <p class="small text-muted">Sesiones profesionales para catálogos y redes sociales.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
-          <div class="gallery-item w-100">
-            <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=400&q=80"
-              alt="Ejemplo 3" />
-            <div class="gallery-text text-center">
-              <h5>Evento corporativo</h5>
-              <p class="small text-muted">Capturamos momentos clave con estilo documental.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
-          <div class="gallery-item w-100">
-            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80"
-              alt="Ejemplo 4" />
-            <div class="gallery-text text-center">
-              <h5>Publicidad creativa</h5>
-              <p class="small text-muted">Imágenes que comunican y venden con estilo único.</p>
-            </div>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <a href="#" class="scroll-top" title="Volver arriba">↑</a>
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Volver arriba" title="Volver arriba" type="button">&uarr;</button>
 
-  <footer>
-    <p>&copy; 2025 Marsal Studio <br />
-      Sitio Web Creado y proporcionado por Erick Emilio Cisneros Marsal</p>
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+    <p class="mb-0">&copy; 2025 Marsal Studio <br> Sitio Web creado y proporcionado por Erick Emilio Cisneros Marsal</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

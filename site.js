@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   // ===============================
-  // 🎯 Animaciones de entrada (IntersectionObserver)
+  // 🎯 Animaciones de entrada
   // ===============================
   const elementosAnimados = document.querySelectorAll('.hero, .service, .about-us, .fade-target, .gallery-item');
 
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
           el.classList.add('fade-in', 'zoom-in');
           el.classList.remove('invisible');
           observer.unobserve(el);
-        }, index * 100); // animación escalonada
+        }, index * 100);
       }
     });
   }, { threshold: 0.1 });
@@ -23,27 +23,30 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ===============================
-  // ⬆️ Botón Scroll-top
+  // ⬆️ Botón Scroll-Top con audio
   // ===============================
   const scrollTopBtn = document.querySelector('.scroll-top');
 
   if (scrollTopBtn) {
     window.addEventListener('scroll', () => {
       const visible = window.scrollY > 200;
-      scrollTopBtn.style.display = visible ? 'block' : 'none';
+      scrollTopBtn.style.display = visible ? 'flex' : 'none';
       scrollTopBtn.classList.toggle('bounce-in', visible);
     });
 
     scrollTopBtn.addEventListener('click', () => {
-      const audio = new Audio('https://depositphotos.com/sound-effect/bright-zoom-sound-effect-431870400.html');
+      // Audio divertido opcional
+      const audio = new Audio('https://assets.mixkit.co/active_storage/sfx/1793/1793-preview.mp3');
       audio.volume = 0.3;
       audio.play();
+
+      // Scroll suave al top
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 
   // ===============================
-  // 📩 Mostrar y enviar formulario de contacto con EmailJS
+  // 📩 Mostrar y enviar formulario con EmailJS
   // ===============================
   const btnMostrar = document.getElementById('mostrar-contacto');
   const formContacto = document.getElementById('contacto-form');
@@ -56,21 +59,21 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // ⚠️ Reemplaza con tu propio USER ID
-    emailjs.init('TUUSERIDAQUI');
+    // 🛡 Reemplaza por tu propia clave pública
+    emailjs.init('TU_PUBLIC_KEY');
 
     formContacto.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      // ⚠️ Reemplaza con tu propio SERVICE ID y TEMPLATE ID
-      emailjs.sendForm('TUSERVICEID', 'TUTEMPLATE_D', formContacto)
+      // 🎯 Reemplaza con tu propio service y template ID
+      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formContacto)
         .then(() => {
-          alert('Correo enviado con éxito 🎉');
+          alert('✅ Correo enviado con éxito');
           formContacto.reset();
           formContacto.classList.remove('visible');
         })
         .catch(err => {
-          console.error('Error al enviar:', err);
+          console.error('❌ Error al enviar:', err);
           alert('Error al enviar: ' + (err?.text || 'Ver consola'));
         });
     });

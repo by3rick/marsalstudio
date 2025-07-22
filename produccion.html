@@ -7,71 +7,146 @@
   <title>Producción | Marsal Studio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style2.css" />
-    <style>
-    /* Link de servicios */
+  <style>
+    /* Servicios */
     .service h2 a {
       color: #6d90ff;
       text-decoration: none;
       transition: color 0.3s ease;
+      word-break: break-word;
     }
-
-    .service h2 a:hover {
+    .service h2 a:hover,
+    .service h2 a:focus {
       color: white;
+      outline: none;
     }
 
+    /* Navbar */
+    nav.navbar {
+      background-color: #121212;
+    }
+    .navbar-nav .nav-link {
+      color: #ddd;
+      transition: color 0.3s ease;
+    }
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link:focus,
+    .navbar-nav .nav-link.active {
+      color: #6d90ff;
+      outline: none;
+    }
+    .navbar-toggler {
+      border-color: #6d90ff;
+    }
+    .navbar-toggler-icon {
+      filter: invert(1);
+    }
+
+    /* Hero section */
+    .hero {
+      background-image: url('https://www.avisualpro.es/wp-content/uploads/2022/11/blog-produccion.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 576px) {
+      .hero {
+        height: 50vh;
+      }
+      .service {
+        max-width: 100%;
+      }
+    }
+
+    /* Mejorar enfoque para accesibilidad */
+    a:focus-visible {
+      outline: 2px solid #6d90ff;
+      outline-offset: 2px;
+    }
   </style>
 </head>
 
-<body>
+<body class="bould-font">
   <header>
- <nav class="navbar navbar-expand-lg navbar-dark px-3">
+    <nav class="navbar navbar-expand-lg navbar-dark px-3" aria-label="Navegación principal">
       <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <img src="https://scontent.fpbc5-1.fna.fbcdn.net/v/t39.30808-6/519505898_705288845836185_1023547191803377491_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ZH0Vfo6Ui5AQ7kNvwFGnpT5&_nc_oc=Adk4vWSyMOlOiMPDVk2oVEhT3B-w8l-Ch3TMmT0KnA3QQD2WnmyxMR7LV8WnF2jEvmj9c9SbJl3FW21CRDEYAMxR&_nc_zt=23&_nc_ht=scontent.fpbc5-1.fna&_nc_gid=p74RzI6UUuuTdujgXiSUUw&oh=00_AfS5pgxUbQOvmYrEihe1D-lR5oHdQJ8IU3nS9X0Sov1LtA&oe=6881DCBA"
-            alt="Logo Marsal Studio" height="40" class="me-2" />
+        <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="Ir a Inicio">
+          <img src="https://scontent.fpbc5-1.fna.fbcdn.net/v/t39.30808-6/519505898_705288845836185_1023547191803377491_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ZH0Vfo6Ui5AQ7kNvwFGnpT5&_nc_oc=Adk4vWSyMOlOiMPDVk2oVEhT3B-w8l-Ch3TMmT0KnA3QQD2WnmyxMR7LV8WnF2jEvmj9c9SbJl3FW21CRDEYAMxR&_nc_zt=23&_nc_ht=scontent.fpbc5-1.fna&_nc_gid=p74RzI6UUuuTdujgXiSUUw&oh=00_AfS5pgxUbQOvmYrEihe1D-lR5oHdQJ8IU3nS9X0Sov1LtA&oe=6881DCBA" alt="Logo Marsal Studio" height="40" class="me-2" loading="lazy" />
           Marsal Studio
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link btn" href="index.html">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link btn" href="fotografia.html">Fotografía</a></li>
-            <li class="nav-item"><a class="nav-link btn" href="index.html#contacto">Contacto</a></li>
+          <ul class="navbar-nav" role="menu">
+            <li class="nav-item" role="none">
+              <a class="nav-link btn" href="index.html" role="menuitem" tabindex="0">Inicio</a>
+            </li>
+            <li class="nav-item" role="none">
+              <a class="nav-link btn" href="fotografia.html" role="menuitem" tabindex="0">Fotografía</a>
+            </li>
+            <li class="nav-item" role="none">
+              <a class="nav-link btn" href="index.html#contacto" role="menuitem" tabindex="0">Contacto</a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
 
-  <section class="hero" style="background-image: url('https://www.avisualpro.es/wp-content/uploads/2022/11/blog-produccion.jpg');">
-    <h1>Producción Audiovisual</h1>
-    <p>Transformamos ideas en imágenes con calidad cinematográfica.</p>
-  </section>
+  <main>
+    <section class="hero" role="banner" aria-label="Sección principal de Producción Audiovisual">
+      <h1>Producción Audiovisual</h1>
+      <p>Transformamos ideas en imágenes con calidad cinematográfica.</p>
+    </section>
 
-  <section class="services container my-5 d-flex flex-wrap justify-content-center gap-4">
-    <div class="service p-4 rounded shadow-sm">
-      <h2><a href="spots.html">Spots Comerciales</a></h2>
-      <p>Creamos anuncios que atrapan, emocionan y venden, perfectos para redes sociales o televisión.</p>
-    </div>
-    <div class="service p-4 rounded shadow-sm">
-      <h2><a href="corporativos.html">Videos Corporativos</a></h2>
-      <p>Contamos la historia de tu empresa de forma profesional para presentar tu marca al mundo.</p>
-    </div>
-  </section>
+    <section class="services container my-5 d-flex flex-wrap justify-content-center gap-4" aria-label="Servicios de Producción Audiovisual">
+      <article class="service p-4 rounded shadow-sm" tabindex="0">
+        <h2><a href="spots.html">Spots Comerciales</a></h2>
+        <p>Creamos anuncios que atrapan, emocionan y venden, perfectos para redes sociales o televisión.</p>
+      </article>
+      <article class="service p-4 rounded shadow-sm" tabindex="0">
+        <h2><a href="corporativos.html">Videos Corporativos</a></h2>
+        <p>Contamos la historia de tu empresa de forma profesional para presentar tu marca al mundo.</p>
+      </article>
+    </section>
+  </main>
 
-  <a href="#" class="scroll-top" title="Volver arriba">↑</a>
+  <button class="scroll-top" title="Volver arriba" aria-label="Botón para volver arriba" id="scrollTopBtn">↑</button>
 
-  <footer class="text-center py-4" style="background-color:#000; color:#ddd;">
-    <p>&copy; 2025 Marsal Studio <br />
-      Sitio Web Creado y proporcionado por Erick Emilio Cisneros Marsal</p>
+  <footer class="text-center py-4 bg-black text-muted" role="contentinfo">
+    <p>&copy; 2025 Marsal Studio <br />Sitio Web Creado y proporcionado por Erick Emilio Cisneros Marsal</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="site.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="site.js" defer></script>
+  <script>
+    // Scroll top button funcional
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
 
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollTopBtn.style.display = 'flex';
+      } else {
+        scrollTopBtn.style.display = 'none';
+      }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 
 </html>

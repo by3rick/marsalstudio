@@ -7,11 +7,7 @@
   <title>Marsal Studio | Fotografía y Producción Audiovisual</title>
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Fuente personalizada Bould -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  <!-- Cambia el link anterior por el de tu fuente Bould si tienes otro -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -24,11 +20,11 @@
         <a class="navbar-brand d-flex align-items-center fade-target" href="#">
           <img
             src="https://scontent.fpbc5-1.fna.fbcdn.net/v/t39.30808-6/519505898_705288845836185_1023547191803377491_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ZH0Vfo6Ui5AQ7kNvwFGnpT5&_nc_oc=Adk4vWSyMOlOiMPDVk2oVEhT3B-w8l-Ch3TMmT0KnA3QQD2WnmyxMR7LV8WnF2jEvmj9c9SbJl3FW21CRDEYAMxR&_nc_zt=23&_nc_ht=scontent.fpbc5-1.fna&_nc_gid=p74RzI6UUuuTdujgXiSUUw&oh=00_AfS5pgxUbQOvmYrEihe1D-lR5oHdQJ8IU3nS9X0Sov1LtA&oe=6881DCBA"
-            alt="Logo Marsal Studio" height="40" class="me-2">
+            alt="Logo Marsal Studio" height="40" class="me-2" />
           Marsal Studio
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -43,83 +39,82 @@
     </nav>
   </header>
 
-  <section class="hero"
-    style="background-image: url('https://scontent.fpbc5-1.fna.fbcdn.net/v/t39.30808-6/514336610_704025442629192_7758527463834064005_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=joF-CLUPCAIQ7kNvwHXxEQb&_nc_oc=AdlLWZHMqvlMIVYdYlYP8pzII1Is-rPWhG431KUyq-vl4BpyMzVN9GwAzvmWQkZbIv_BYebPHUVE1huWIZ4dsGbi&_nc_zt=23&_nc_ht=scontent.fpbc5-1.fna&_nc_gid=j6PPsTbaxTvbRBnWM5cr8Q&oh=00_AfTp0BnL_8kCBcfMjZxhrU8y0XVTeExWsVvdxJ0-jn0A6w&oe=687FB977');">
-    <h1>Producción Audiovisual y Fotografía Publicitaria</h1>
-    <p>Capturamos tu esencia, transmitimos tu mensaje</p>
-  </section>
+  <main>
+    <section class="hero text-center text-white d-flex flex-column justify-content-center align-items-center"
+      style="background-image: url('https://scontent.fpbc5-1.fna.fbcdn.net/v/t39.30808-6/514336610_704025442629192_7758527463834064005_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=joF-CLUPCAIQ7kNvwHXxEQb&_nc_oc=AdlLWZHMqvlMIVYdYlYP8pzII1Is-rPWhG431KUyq-vl4BpyMzVN9GwAzvmWQkZbIv_BYebPHUVE1huWIZ4dsGbi&_nc_zt=23&_nc_ht=scontent.fpbc5-1.fna&_nc_gid=j6PPsTbaxTvbRBnWM5cr8Q&oh=00_AfTp0BnL_8kCBcfMjZxhrU8y0XVTeExWsVvdxJ0-jn0A6w&oe=687FB977'); background-size: cover; background-position: center; height: 80vh;">
+      <h1 class="display-4 fw-bold">Producción Audiovisual y Fotografía Publicitaria</h1>
+      <p class="lead">Capturamos tu esencia, transmitimos tu mensaje</p>
+    </section>
 
-  <section class="services" id="servicios">
-    <div class="service">
-      <h2>Producción Audiovisual</h2>
-      <p>Videos profesionales con calidad cinematográfica para promocionar tu marca o contar tu historia.</p>
-      <a href="produccion.html" class="btn btn-service">Mejor información</a>
-    </div>
-    <div class="service">
-      <h2>Fotografía Publicitaria</h2>
-      <p>Imágenes impactantes que venden, enamoran y comunican lo mejor de tus productos o servicios.</p>
-      <a href="fotografia.html" class="btn btn-service">Mejor información</a>
-    </div>
-  </section>
+    <section class="services d-flex justify-content-center gap-5 py-5" id="servicios">
+      <article class="service text-center p-3 shadow rounded" style="max-width: 350px;">
+        <h2>Producción Audiovisual</h2>
+        <p>Videos profesionales con calidad cinematográfica para promocionar tu marca o contar tu historia.</p>
+        <a href="produccion.html" class="btn btn-service">Mejor información</a>
+      </article>
+      <article class="service text-center p-3 shadow rounded" style="max-width: 350px;">
+        <h2>Fotografía Publicitaria</h2>
+        <p>Imágenes impactantes que venden, enamoran y comunican lo mejor de tus productos o servicios.</p>
+        <a href="fotografia.html" class="btn btn-service">Mejor información</a>
+      </article>
+    </section>
 
-  <!-- Sección ¿Quiénes somos? -->
-  <section class="about-us fade-target" id="nosotros">
-    <div class="container text-center py-5">
-      <h2 class="mb-4">¿Quiénes somos?</h2>
-      <h>
-        En <strong>Marsal Studio</strong> somos un equipo apasionado por contar historias que conectan, inspiran y
-        venden.
-        Combinamos la creatividad con la técnica para ofrecer servicios de <strong>fotografía publicitaria</strong> y
-        <strong>producción audiovisual</strong> de alto impacto. Nuestro objetivo es convertir tus ideas en imágenes que
-        hablen por sí solas.
-      </h>
-    </div>
-  </section>
-  <button id="mostrar-contacto">Contacto</button>
+    <section class="about-us fade-target text-center py-5" id="nosotros">
+      <div class="container">
+        <h2 class="mb-4">¿Quiénes somos?</h2>
+        <p>
+          En <strong>Marsal Studio</strong> somos un equipo apasionado por contar historias que conectan, inspiran y venden.
+          Combinamos la creatividad con la técnica para ofrecer servicios de <strong>fotografía publicitaria</strong> y
+          <strong>producción audiovisual</strong> de alto impacto. Nuestro objetivo es convertir tus ideas en imágenes que
+          hablen por sí solas.
+        </p>
+      </div>
+    </section>
 
-  <form id="contacto-form">
-    <h2>Contáctanos</h2>
-    <label for="nombre">Nombre</label>
-    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+    <button id="mostrar-contacto" class="btn btn-primary mx-auto d-block mb-5">Contacto</button>
 
-    <label for="email">Correo</label>
-    <input type="email" id="email" name="email" placeholder="Tu correo" required>
+    <form id="contacto-form" class="container mx-auto p-4 shadow rounded" style="max-width: 500px; display:none;">
+      <h2>Contáctanos</h2>
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Tu nombre" required />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Correo</label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="Tu correo" required />
+      </div>
+      <div class="mb-3">
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" class="form-control" placeholder="Escribe tu mensaje" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-success">Enviar</button>
+    </form>
 
-    <label for="mensaje">Mensaje</label>
-    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje" rows="5" required></textarea>
+    <a href="#" class="scroll-top" title="Volver arriba">↑</a>
+  </main>
 
-    <button type="submit">Enviar</button>
-  </form>
-
-  <a href="#" class="scroll-top" title="Volver arriba">↑</a>
-
-  <!-- Footer -->
-  <footer id="contacto" class="fade-target">
+  <footer id="contacto" class="fade-target bg-dark text-white text-center py-4 mt-5">
     <p><strong>Ubicación:</strong> Durango, México</p>
     <p><strong>Cotizaciones:</strong> 618 163 3200 | 614 533 2157</p>
-    <p><strong>Email:</strong> <a href="mailto:marsalcine@gmail.com">marsalcine@gmail.com</a></p>
+      <p><strong>Email:</strong> <a href="mailto:marsalcine@gmail.com">marsalcine@gmail.com</a></p>
+  
+  <div class="social-links" style="display: flex; gap: 20px; align-items: center; justify-content: center; flex-wrap: wrap;">
+    <a href="https://www.facebook.com/profile.php?id=61550565143966&locale=es_LA" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="#1877F2" viewBox="0 0 24 24">
+        <path d="M22.675 0h-21.35C.597 0 0 .592 0 1.323v21.354C0 23.404.597 24 1.325 24h11.494v-9.294H9.691v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464.098 2.796.142v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.312h3.588l-.467 3.622h-3.121V24h6.116c.728 0 1.324-.596 1.324-1.323V1.323C24 .592 23.404 0 22.675 0z"/>
+      </svg>
+      <span>Marsal Studio</span>
+    </a>
 
-    <div class="social-links"
-      style="display: flex; gap: 20px; align-items: center; justify-content: center; flex-wrap: wrap;">
-      <a href="https://www.facebook.com/profile.php?id=61550565143966&locale=es_LA" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="#1877F2" viewBox="0 0 24 24">
-          <path
-            d="M22.675 0h-21.35C.597 0 0 .592 0 1.323v21.354C0 23.404.597 24 1.325 24h11.494v-9.294H9.691v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464.098 2.796.142v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.312h3.588l-.467 3.622h-3.121V24h6.116c.728 0 1.324-.596 1.324-1.323V1.323C24 .592 23.404 0 22.675 0z" />
-        </svg>
-        <span>Marsal Studio</span>
-      </a>
+    <a href="https://www.instagram.com/marsal.studio/" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="#E4405F" viewBox="0 0 24 24">
+        <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm5.75-.375a1.125 1.125 0 110 2.25 1.125 1.125 0 010-2.25z"/>
+      </svg>
+      <span>marsal.studio</span>
+    </a>
+  </div>
 
-      <a href="https://www.instagram.com/marsal.studio/" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="#E4405F" viewBox="0 0 24 24">
-          <path
-            d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm5.75-.375a1.125 1.125 0 110 2.25 1.125 1.125 0 010-2.25z" />
-        </svg>
-        <span>marsal.studio</span>
-      </a>
-    </div>
-
-    <p style="margin-top: 1rem;">&copy; 2025 Marsal Studio <br> Sitio Web Creado y proporcionado por Erick Emilio
-      Cisneros Marsal</p>
+    <p class="mt-3 mb-0">&copy; 2025 Marsal Studio <br /> Sitio Web Creado y proporcionado por Erick Emilio Cisneros Marsal</p>
   </footer>
 
   <!-- Scripts -->

@@ -5,21 +5,155 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Videos Corporativos | Marsal Studio</title>
-  <link rel="stylesheet" href="style.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Bould', sans-serif;
+      background-color: #121212;
+      color: #eee;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navbar mejorada */
+    .navbar {
+      background-color: #181818 !important;
+    }
+
+    .navbar-brand img {
+      filter: drop-shadow(0 0 2px rgba(255, 59, 63, 0.7));
+    }
+
+    .navbar-dark .navbar-nav .nav-link.btn {
+      color: #eee;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-dark .navbar-nav .nav-link.btn:hover,
+    .navbar-dark .navbar-nav .nav-link.btn:focus {
+      color: #ff3b3f;
+      text-decoration: none;
+    }
+
+    /* Hero con overlay para texto legible */
+    .hero {
+      position: relative;
+      height: 60vh;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      padding: 0 1rem;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(18, 18, 18, 0.7);
+      z-index: 0;
+    }
+
+    .hero h1,
+    .hero p {
+      position: relative;
+      z-index: 1;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    }
+
+    /* Glassmorphism para servicios */
+    .service {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 59, 63, 0.3);
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 15px rgba(255, 59, 63, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: #eee;
+      padding: 2rem 1.5rem;
+    }
+
+    .service:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(255, 59, 63, 0.4);
+    }
+
+    /* Botón flotante */
+    .scroll-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1050;
+      background: #ff3b3f;
+      box-shadow: 0 4px 12px rgba(255, 59, 63, 0.6);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      color: white;
+      font-weight: 700;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      border: none;
+      text-decoration: none;
+    }
+
+    .scroll-top:hover,
+    .scroll-top:focus {
+      background: #d13034;
+      transform: scale(1.1);
+      text-decoration: none;
+      color: white;
+      outline: none;
+      box-shadow: 0 6px 20px rgba(209, 48, 52, 0.8);
+    }
+
+    footer {
+      background-color: #181818;
+      color: #eee;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+      margin-top: auto;
+      user-select: none;
+    }
+
+    /* Responsivo texto hero */
+    @media (max-width: 576px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
 </head>
 
-<body>
+<body class="bould-font">
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3" aria-label="Navegación principal">
       <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <img
-            src="https://scontent.fpbc5-1.fna.fbcdn.net/v/t39.30808-6/519505898_705288845836185_1023547191803377491_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ZH0Vfo6Ui5AQ7kNvwFGnpT5&_nc_oc=Adk4vWSyMOlOiMPDVk2oVEhT3B-w8l-Ch3TMmT0KnA3QQD2WnmyxMR7LV8WnF2jEvmj9c9SbJl3FW21CRDEYAMxR&_nc_zt=23&_nc_ht=scontent.fpbc5-1.fna&_nc_gid=p74RzI6UUuuTdujgXiSUUw&oh=00_AfS5pgxUbQOvmYrEihe1D-lR5oHdQJ8IU3nS9X0Sov1LtA&oe=6881DCBA"
+          <img src="https://scontent.fpbc5-1.fna.fbcdn.net/v/t39.30808-6/519505898_705288845836185_1023547191803377491_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ZH0Vfo6Ui5AQ7kNvwFGnpT5&_nc_oc=Adk4vWSyMOlOiMPDVk2oVEhT3B-w8l-Ch3TMmT0KnA3QQD2WnmyxMR7LV8WnF2jEvmj9c9SbJl3FW21CRDEYAMxR&_nc_zt=23&_nc_ht=scontent.fpbc5-1.fna&_nc_gid=p74RzI6UUuuTdujgXiSUUw&oh=00_AfS5pgxUbQOvmYrEihe1D-lR5oHdQJ8IU3nS9X0Sov1LtA&oe=6881DCBA"
             alt="Logo Marsal Studio" height="40" class="me-2" />
           Marsal Studio
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
+          aria-expanded="false" aria-label="Alternar navegación">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -39,35 +173,36 @@
     </nav>
   </header>
 
-  <section class="hero"
-    style="background-image: url('https://sirthomas.es/wp-content/uploads/2019/11/kushagra-kevat-cc4VWYA1S8U-unsplash_1920.jpg');">
-    <h1>Videos Corporativos</h1>
-    <p>Tu empresa contada con elegancia y profesionalismo.</p>
-  </section>
+  <main class="flex-grow-1">
+    <section class="hero" style="background-image: url('https://sirthomas.es/wp-content/uploads/2019/11/kushagra-kevat-cc4VWYA1S8U-unsplash_1920.jpg');">
+      <h1 class="display-4 fw-bold">Videos Corporativos</h1>
+      <p class="lead">Tu empresa contada con elegancia y profesionalismo.</p>
+    </section>
 
-  <section class="services">
-    <div class="service">
-      <h2>¿Qué es?</h2>
-      <p>Un video que representa tu identidad como empresa, mostrando tus valores y fortalezas con claridad visual.</p>
-    </div>
-    <div class="service">
-      <h2>Proceso</h2>
-      <p>Reunión con tu equipo, desarrollo de guión, entrevistas, tomas del entorno, y edición profesional.</p>
-    </div>
-    <div class="service">
-      <h2>Ideal para</h2>
-      <p>Webs corporativas, presentaciones institucionales, campañas de marca o comunicación interna.</p>
-    </div>
-  </section>
+    <section class="services container my-5">
+      <div class="row text-center g-4">
+        <article class="col-md-4 service">
+          <h2 class="h4 mb-3">¿Qué es?</h2>
+          <p>Un video que representa tu identidad como empresa, mostrando tus valores y fortalezas con claridad visual.</p>
+        </article>
+        <article class="col-md-4 service">
+          <h2 class="h4 mb-3">Proceso</h2>
+          <p>Reunión con tu equipo, desarrollo de guión, entrevistas, tomas del entorno, y edición profesional.</p>
+        </article>
+        <article class="col-md-4 service">
+          <h2 class="h4 mb-3">Ideal para</h2>
+          <p>Webs corporativas, presentaciones institucionales, campañas de marca o comunicación interna.</p>
+        </article>
+      </div>
+    </section>
+  </main>
 
-  <a href="produccion.html" class="btn btn-danger scroll-top" title="Volver a Producción"
-    style="position: fixed; bottom: 20px; right: 20px; z-index: 1050; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+  <a href="produccion.html" class="scroll-top" title="Volver a Producción" aria-label="Volver a Producción">
     ←
   </a>
 
   <footer>
-    <p>&copy; 2025 Marsal Studio <br>
-      Sitio Web Creado y proporcionado por Erick Emilio Cisneros Marsal</p>
+    <p>&copy; 2025 Marsal Studio<br />Sitio Web Creado y proporcionado por Erick Emilio Cisneros Marsal</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
