@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   // ===============================
-  // 🎯 Animaciones de entrada
+  // Animaciones de entrada
   // ===============================
   const elementosAnimados = document.querySelectorAll('.hero, .service, .about-us, .fade-target, .gallery-item');
 
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ===============================
-  // ⬆️ Botón Scroll-Top con audio
+  //  Botón Scroll-Top con audio
   // ===============================
   const scrollTopBtn = document.querySelector('.scroll-top');
 
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ===============================
-  // 📩 Mostrar y enviar formulario con EmailJS
+  // Mostrar y enviar formulario con EmailJS
   // ===============================
   const btnMostrar = document.getElementById('mostrar-contacto');
   const formContacto = document.getElementById('contacto-form');
@@ -59,21 +59,21 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // 🛡 Reemplaza por tu propia clave pública
+    // Reemplaza por tu propia clave pública
     emailjs.init('TU_PUBLIC_KEY');
 
     formContacto.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      // 🎯 Reemplaza con tu propio service y template ID
+      // Reemplaza con tu propio service y template ID
       emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formContacto)
         .then(() => {
-          alert('✅ Correo enviado con éxito');
+          alert(' Correo enviado con éxito');
           formContacto.reset();
           formContacto.classList.remove('visible');
         })
         .catch(err => {
-          console.error('❌ Error al enviar:', err);
+          console.error(' Error al enviar:', err);
           alert('Error al enviar: ' + (err?.text || 'Ver consola'));
         });
     });
