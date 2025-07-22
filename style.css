@@ -1,16 +1,17 @@
-/* Paleta de colores oficial Marsal Studio */
+/* ============================= */
+/* Paleta de colores oficial */
+/* ============================= */
 :root {
-  --marsal-dark: #17171C; /* R23 G23 B28 */
-  --marsal-red: #FF0808;  /* R255 G8 B8 */
-  --text-light: #e1e1e1;
+  --marsal-dark: #17171C;
+  --marsal-red: #FF0808;
+  --text-light: #f1f1f1;
   --accent-blue: #6d90ff;
-  --text-soft: #cccccc;
-  --text-muted: #dcdcdc;
+  --text-soft: #bbbbbb;
+  --text-muted: #c4c4c4;
   --bg-soft: #222;
   --bg-base: #111;
 }
 
-/* Fuentes Bould ordenadas */
 @font-face {
   font-family: 'Bould';
   src: url('fonts/Bould-Bold.otf') format('opentype');
@@ -109,21 +110,26 @@
   font-style: italic;
 }
 
-body {
-  margin: 0;
-  background-color: var(--bg-base);
-  color: var(--text-light);
-  font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
-}
-
+/* ============================= */
+/* Estructura base */
+/* ============================= */
 html {
   scroll-behavior: smooth;
 }
 
-/* Navbar oscuro y texto claro */
+body {
+  margin: 0;
+  background-color: var(--bg-base);
+  color: var(--text-light);
+  font-family: 'Bould', sans-serif;
+}
+
+/* ============================= */
+/* Navbar */
+/* ============================= */
 .navbar {
   background-color: var(--marsal-dark) !important;
-} 
+}
 
 .navbar-brand,
 .nav-link {
@@ -131,14 +137,16 @@ html {
 }
 
 .nav-link:hover {
-      color:var(--accent-blue);
+  color: var(--accent-blue);
 }
 
 .navbar-nav .nav-link {
   margin: 0 12px;
 }
 
-/* Hero con títulos en azul y sombras */
+/* ============================= */
+/* Hero */
+/* ============================= */
 .hero {
   background-size: cover;
   background-position: center;
@@ -148,19 +156,19 @@ html {
 
 .hero h1 {
   font-size: 3rem;
-      color:var(--accent-blue);
+  color: var(--accent-blue);
   text-shadow: 1px 1px 3px #444;
-font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
 }
 
 .hero p {
   font-size: 1.2rem;
   color: var(--text-soft);
   text-shadow: 2px 2px 4px #666;
-font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
 }
 
-/* Sección servicios con fondo oscuro y cards */
+/* ============================= */
+/* Sección Servicios */
+/* ============================= */
 .services {
   display: flex;
   flex-wrap: wrap;
@@ -173,13 +181,12 @@ font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lig
   flex: 1 1 300px;
   max-width: 400px;
   margin: 20px;
-  background-color:var(--bg-soft);
+  background-color: var(--bg-soft);
   padding: 30px;
   border-radius: 10px;
   text-align: center;
   color: var(--text-light);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
 }
 
 .service:hover {
@@ -188,207 +195,90 @@ font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lig
 }
 
 .service h2 {
-      color:var(--accent-blue);
-font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
+  color: var(--accent-blue);
 }
 
-/* Footer oscuro */
-footer {
-  background-color: #000;
-  color: var(--text-muted);
-  text-align: center;
-  padding: 20px;
-font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
-}
-
-footer a {
-      color:var(--accent-blue);
-  text-decoration: none; 
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Botones personalizados */
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-      color: #6d90ff;
-  color: #fff !important;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: var(--marsal-red);
-font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px var(--marsal-red);
-}
-
-/* Animaciones fade-in e invisibilidad */
-.invisible {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.fade-in {
-  opacity: 1 !important;
-  transform: translateY(0);
-}
-
-/* Scroll top button */
-.scroll-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-      color: #6d90ff;
-  color: #fff;
-  background-color: var(--marsal-red);
-  font-size: 1.5rem;
-  padding: 10px 14px;
-  border-radius: 50%;
-  text-decoration: none;
-  box-shadow: 0 4px 12px rgba(109, 144, 255, 0.6);
-  display: none;
-  z-index: 1000;
-  transition: transform 0.3s ease;
-}
-
-.scroll-top:hover {
-  transform: translateY(-4px);
-}
-
-/* Links sociales */
-  .social-links a {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  .social-links a svg {
-    transition: fill 0.3s ease;
-  }
-
-  .social-links a:hover {
-    color: var(--marsal-red); /* un naranja cool para el hover */
-    text-decoration: underline;
-  }
-
-  .social-links a:hover svg {
-    fill: var(--marsal-red); /* el ícono también cambia a naranja */
-  }
-
-/* Sección about-us */
+/* ============================= */
+/* Acerca de nosotros */
+/* ============================= */
 .about-us {
   background-color: var(--bg-base);
   color: var(--text-light);
   padding: 60px 20px;
   text-align: center;
-font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lightitalic, medium, mediumitalic, regular, regularitalic, semibold, semibolditalic, thin, thinitalic;
 }
 
 .about-us h2 {
- color: var(--accent-blue);
+  color: var(--accent-blue);
 }
 
+/* ============================= */
+/* Galería */
+/* ============================= */
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px 20px;
-    background-color: var(--bg-base);
-  }
-  .gallery-item {
-    position: relative;
-    width: 300px;
-    height: 225px; /* 4:3 ratio */
-    border-radius: 12px;
-    overflow: hidden;
-    background-color: var(--bg-soft);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    padding: 15px;
-    text-align: center;
-  }
-  .gallery-item img {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    z-index: 0;
-    filter: brightness(0.5);
-  }
-  .gallery-item .big-text {
-    position: relative;
-    z-index: 1;
-    font-size: clamp(1.4rem, 5vw, 2rem);
-    font-weight: 700;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
-    color: white;
-  }
-  .gallery-item .small-text {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    right: 15px;
-    font-size: 0.9rem;
-    opacity: 0.85;
-    white-space: normal;
-    color: #ddd;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
-    z-index: 1;
-  }
-  .gallery-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
-  }
-
-/* Responsive para hero */
-@media (max-width: 480px) {
-  .hero {
-    padding: 60px 15px;
-  }
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-}
-/* Extra animaciones */
-.zoom-in {
-  transform: scale(1);
-  opacity: 1;
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  background-color: var(--bg-base);
 }
 
-.invisible {
-  opacity: 0;
-  transform: scale(0.95);
+.gallery-item {
+  position: relative;
+  width: 300px;
+  height: 225px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--bg-soft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.bounce-in {
-  animation: bounce-in 0.6s ease;
+.gallery-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  filter: brightness(0.5);
 }
 
-@keyframes bounce-in {
-  0% { transform: scale(0.8); }
-  60% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+.gallery-item .big-text {
+  z-index: 1;
+  font-size: clamp(1.4rem, 5vw, 2rem);
+  font-weight: 700;
+  color: white;
 }
+
+.gallery-item .small-text {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  font-size: 0.9rem;
+  color: #ddd;
+  opacity: 0.85;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+}
+
+/* ============================= */
+/* Caja de contacto */
+/* ============================= */
 #contacto-form {
   background-color: var(--bg-base);
   padding: 40px 30px;
@@ -396,12 +286,11 @@ font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lig
   max-width: 600px;
   margin: 40px auto;
   border-radius: 12px;
-  font-family: 'Bould', sans-serif;
-  box-shadow: 0 4px 25px rgba(109, 144, 255, 0.35);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   display: none;
   opacity: 0;
-  transition: opacity 0.6s ease, transform 0.4s ease;
   transform: translateY(-20px);
+  transition: opacity 0.6s ease, transform 0.4s ease;
   will-change: opacity, transform;
 }
 
@@ -416,7 +305,6 @@ font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lig
   text-align: center;
   margin-bottom: 30px;
   font-weight: 700;
-  letter-spacing: 1.2px;
   font-size: 2rem;
 }
 
@@ -425,7 +313,6 @@ font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lig
   margin-bottom: 8px;
   font-weight: 600;
   color: var(--text-soft);
-  user-select: none;
 }
 
 #contacto-form input,
@@ -437,16 +324,14 @@ font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lig
   background-color: var(--bg-soft);
   color: var(--text-light);
   font-size: 1rem;
-  font-family: 'Bould', sans-serif;
   resize: vertical;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.7);
   transition: background-color 0.4s ease, box-shadow 0.4s ease;
-  box-shadow: inset 0 0 6px rgba(0,0,0,0.7);
 }
 
 #contacto-form input::placeholder,
 #contacto-form textarea::placeholder {
   color: var(--text-muted);
-  font-weight: 400;
   font-style: italic;
 }
 
@@ -455,13 +340,11 @@ font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lig
   outline: none;
   background-color: #2a2a3a;
   box-shadow: 0 0 12px var(--accent-blue);
-  color: var(--text-light);
-  transition: box-shadow 0.3s ease;
 }
 
 #contacto-form button {
   display: block;
-  margin: 30px auto 0 auto;
+  margin: 30px auto 0;
   background-color: var(--marsal-red);
   color: white;
   border: none;
@@ -471,7 +354,6 @@ font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lig
   font-weight: 800;
   font-size: 1.2rem;
   cursor: pointer;
-  font-family: 'Bould', sans-serif;
   letter-spacing: 0.7px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
   box-shadow: 0 4px 12px rgba(109, 144, 255, 0.5);
@@ -495,9 +377,7 @@ font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lig
   font-weight: 800;
   font-size: 1.2rem;
   cursor: pointer;
-  font-family: 'Bould', sans-serif;
   letter-spacing: 0.7px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
   box-shadow: 0 4px 15px rgba(109, 144, 255, 0.6);
 }
 
@@ -505,4 +385,181 @@ font-family: 'Bould', bold, bolditalic, extralight, extralightitalic, light, lig
   background-color: #cc0707;
   box-shadow: 0 0 20px var(--marsal-red);
   transform: scale(1.05);
+}
+
+/* ============================= */
+/* Responsive Hero */
+/* ============================= */
+@media (max-width: 480px) {
+  .hero {
+    padding: 60px 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* ============================= */
+/* Botón Scroll Top */
+/* ============================= */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--marsal-red);
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 10px 14px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(109, 144, 255, 0.6);
+  display: none;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.scroll-top:hover {
+  transform: translateY(-4px);
+}
+
+/* ============================= */
+/*  Botones generales */
+/* ============================= */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--marsal-red);
+  color: #fff !important;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px var(--marsal-red);
+}
+
+/* ============================= */
+/* Redes Sociales */
+/* ============================= */
+.social-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a svg {
+  transition: fill 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--marsal-red);
+  text-decoration: underline;
+}
+
+.social-links a:hover svg {
+  fill: var(--marsal-red);
+}
+
+/* ============================= */
+/* Footer */
+/* ============================= */
+footer {
+  background-color: #000;
+  color: var(--text-muted);
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ============================= */
+/*  Animaciones */
+/* ============================= */
+.invisible {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.fade-in {
+  opacity: 1 !important;
+  transform: translateY(0);
+}
+
+.zoom-in {
+  transform: scale(1);
+  opacity: 1;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.bounce-in {
+  animation: bounce-in 0.6s ease;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0.8);
+  }
+
+  60% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.motion-fade-up {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.motion-scale-in {
+  animation: scaleIn 0.5s ease forwards;
+}
+
+/* ============================= */
+/*  Glassmorphism */
+/* ============================= */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }

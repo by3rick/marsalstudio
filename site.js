@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const elements = document.querySelectorAll('.hero, .service, .about-us, .fade-target, .gallery-item');
+  // ===============================
+  // 🎯 Animaciones de entrada (IntersectionObserver)
+  // ===============================
+  const elementosAnimados = document.querySelectorAll('.hero, .service, .about-us, .fade-target, .gallery-item');
 
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry, index) => {
@@ -9,67 +12,67 @@ document.addEventListener('DOMContentLoaded', () => {
           el.classList.add('fade-in', 'zoom-in');
           el.classList.remove('invisible');
           observer.unobserve(el);
-        }, index * 100); // delay tipo "staggered"
+        }, index * 100); // animación escalonada
       }
     });
-  }, {
-    threshold: 0.1
-  });
+  }, { threshold: 0.1 });
 
-  elements.forEach(el => {
+  elementosAnimados.forEach(el => {
     el.classList.add('invisible');
     observer.observe(el);
   });
-});
 
-// Mostrar scroll-top al bajar
-window.addEventListener('scroll', () => {
+  // ===============================
+  // ⬆️ Botón Scroll-top
+  // ===============================
   const scrollTopBtn = document.querySelector('.scroll-top');
+
   if (scrollTopBtn) {
-    if (window.scrollY > 200) {
-      scrollTopBtn.style.display = 'block';
-      scrollTopBtn.classList.add('bounce-in');
-    } else {
-      scrollTopBtn.style.display = 'none';
-      scrollTopBtn.classList.remove('bounce-in');
-    }
+    window.addEventListener('scroll', () => {
+      const visible = window.scrollY > 200;
+      scrollTopBtn.style.display = visible ? 'block' : 'none';
+      scrollTopBtn.classList.toggle('bounce-in', visible);
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+      const audio = new Audio('https://depositphotos.com/sound-effect/bright-zoom-sound-effect-431870400.html');
+      audio.volume = 0.3;
+      audio.play();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   }
-});
 
-// Efecto sonoro al hacer clic (opcional)
-document.querySelector('.scroll-top')?.addEventListener('click', () => {
-  const audio = new Audio('https://cdn.pixabay.com/audio/2022/08/04/audio_8c95b3b3e8.mp3');
-  audio.volume = 0.3;
-  audio.play();
-});
-
-document.addEventListener('DOMContentLoaded', () => {
+  // ===============================
+  // 📩 Mostrar y enviar formulario de contacto con EmailJS
+  // ===============================
   const btnMostrar = document.getElementById('mostrar-contacto');
   const formContacto = document.getElementById('contacto-form');
 
-  btnMostrar.addEventListener('click', () => {
-    formContacto.classList.toggle('visible');
-    if (formContacto.classList.contains('visible')) {
-      formContacto.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
+  if (btnMostrar && formContacto) {
+    btnMostrar.addEventListener('click', () => {
+      formContacto.classList.toggle('visible');
+      if (formContacto.classList.contains('visible')) {
+        formContacto.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
 
-  formContacto.addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Formulario enviado, pero esta parte la debes implementar.');
-    formContacto.reset();
-    formContacto.classList.remove('visible');
-  });
+    // ⚠️ Reemplaza con tu propio USER ID
+    emailjs.init('TUUSERIDAQUI');
+
+    formContacto.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // ⚠️ Reemplaza con tu propio SERVICE ID y TEMPLATE ID
+      emailjs.sendForm('TUSERVICEID', 'TUTEMPLATE_D', formContacto)
+        .then(() => {
+          alert('Correo enviado con éxito 🎉');
+          formContacto.reset();
+          formContacto.classList.remove('visible');
+        })
+        .catch(err => {
+          console.error('Error al enviar:', err);
+          alert('Error al enviar: ' + (err?.text || 'Ver consola'));
+        });
+    });
+  }
 });
-
-(function(){
-  emailjs.init('TUUSERIDAQUI');
-})();
-
-document.getElementById('contacto-form').addEventListener('submit', function(event){
-  event.preventDefault();
-  emailjs.sendForm('TUSERVICEID', 'TUTEMPLATE_D', this)
-    .then(() => alert('Correo enviado con éxito '))
-    .catch(err => alert('Error al enviar: ' + JSON.stringify(err)));
-});
-
