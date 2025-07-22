@@ -13,98 +13,98 @@
 /* Fuentes Bould ordenadas */
 @font-face {
   font-family: 'Bould';
-  src: url('fonts/Bould-Bold.otf') format('opentype');
+  src: url('Bould-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Bould';
-  src: url('fonts/Bould-BoldItalic.otf') format('opentype');
+  src: url('Bould-BoldItalic.otf') format('opentype');
   font-weight: 700;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Bould';
-  src: url('fonts/Bould-ExtraLight.otf') format('opentype');
+  src: url('Bould-ExtraLight.otf') format('opentype');
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Bould';
-  src: url('fonts/Bould-ExtraLightItalic.otf') format('opentype');
+  src: url('Bould-ExtraLightItalic.otf') format('opentype');
   font-weight: 200;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Bould';
-  src: url('fonts/Bould-Light.otf') format('opentype');
+  src: url('Bould-Light.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Bould';
-  src: url('fonts/Bould-LightItalic.otf') format('opentype');
+  src: url('Bould-LightItalic.otf') format('opentype');
   font-weight: 300;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Bould';
-  src: url('fonts/Bould-Medium.otf') format('opentype');
+  src: url('Bould-Medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Bould';
-  src: url('fonts/Bould-MediumItalic.otf') format('opentype');
+  src: url('Bould-MediumItalic.otf') format('opentype');
   font-weight: 500;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Bould';
-  src: url('fonts/Bould-Regular.otf') format('opentype');
+  src: url('Bould-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Bould';
-  src: url('fonts/Bould-RegularItalic.otf') format('opentype');
+  src: url('Bould-RegularItalic.otf') format('opentype');
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Bould';
-  src: url('fonts/Bould-SemiBold.otf') format('opentype');
+  src: url('Bould-SemiBold.otf') format('opentype');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Bould';
-  src: url('fonts/Bould-SemiBoldItalic.otf') format('opentype');
+  src: url('Bould-SemiBoldItalic.otf') format('opentype');
   font-weight: 600;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Bould';
-  src: url('fonts/Bould-Thin.otf') format('opentype');
+  src: url('Bould-Thin.otf') format('opentype');
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Bould';
-  src: url('fonts/Bould-ThinItalic.otf') format('opentype');
+  src: url('Bould-ThinItalic.otf') format('opentype');
   font-weight: 100;
   font-style: italic;
 }

@@ -63,13 +63,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 (function(){
-  emailjs.init('TU_USER_ID_AQUI'); // Aquí va tu User ID de EmailJS
+  emailjs.init('TUUSERIDAQUI');
 })();
 
 document.getElementById('contacto-form').addEventListener('submit', function(event){
   event.preventDefault();
-  emailjs.sendForm('TU_SERVICE_ID', 'TU_TEMPLATE_ID', this)
-    .then(() => alert('Correo enviado con éxito 🚀'))
+  emailjs.sendForm('TUSERVICEID', 'TUTEMPLATE_D', this)
+    .then(() => alert('Correo enviado con éxito '))
     .catch(err => alert('Error al enviar: ' + JSON.stringify(err)));
 });
 
