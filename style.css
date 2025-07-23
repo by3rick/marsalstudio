@@ -199,7 +199,7 @@ body {
 /* Responsivo */
 @media (max-width: 430px) {
   .hero {
-    height: 20vh;
+    height: 25vh;
     background-position: top center;
     background-attachment: scroll; /* mejor para móviles */
   }
