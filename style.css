@@ -196,12 +196,12 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 0;
-  padding: 0;
 }
 
+/* Para pantallas pequeñas, cambia la imagen por una más ligera o con otro recorte */
 @media (max-width: 576px) {
   .hero {
+    background-image: url('imagenes\Proyecto Cambiar tamaño de imagen.png');
     height: 60vh;
     background-position: center top;
   }
