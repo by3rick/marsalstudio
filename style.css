@@ -197,9 +197,9 @@ body {
 }
 
 /* Responsivo */
-@media (max-width: 768px) {
+@media (max-width: 3000px) {
   .hero {
-    height: 5vh;
+    height: 10vh;
     background-position: top center;
     background-attachment: fixed;
   }
