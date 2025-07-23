@@ -7,140 +7,7 @@
   <title>Videos Corporativos | Marsal Studio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: 'Bould', sans-serif;
-      background-color: #121212;
-      color: #eee;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
 
-    /* Navbar mejorada */
-    .navbar {
-      background-color: #181818 !important;
-    }
-
-    .navbar-brand img {
-      filter: drop-shadow(0 0 2px rgba(255, 59, 63, 0.7));
-    }
-
-    .navbar-dark .navbar-nav .nav-link.btn {
-      color: #eee;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    .navbar-dark .navbar-nav .nav-link.btn:hover,
-    .navbar-dark .navbar-nav .nav-link.btn:focus {
-      color: #ff3b3f;
-      text-decoration: none;
-    }
-
-    /* Hero con overlay para texto legible */
-    .hero {
-      position: relative;
-      height: 60vh;
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-      text-align: center;
-      padding: 0 1rem;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(18, 18, 18, 0.7);
-      z-index: 0;
-    }
-
-    .hero h1,
-    .hero p {
-      position: relative;
-      z-index: 1;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
-    }
-
-    /* Glassmorphism para servicios */
-    .service {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 59, 63, 0.3);
-      border-radius: 12px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 15px rgba(255, 59, 63, 0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      color: #eee;
-      padding: 2rem 1.5rem;
-    }
-
-    .service:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 25px rgba(255, 59, 63, 0.4);
-    }
-
-    /* Botón flotante */
-    .scroll-top {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 1050;
-      background: #ff3b3f;
-      box-shadow: 0 4px 12px rgba(255, 59, 63, 0.6);
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      color: white;
-      font-weight: 700;
-      font-size: 1.8rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      user-select: none;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-      border: none;
-      text-decoration: none;
-    }
-
-    .scroll-top:hover,
-    .scroll-top:focus {
-      background: #d13034;
-      transform: scale(1.1);
-      text-decoration: none;
-      color: white;
-      outline: none;
-      box-shadow: 0 6px 20px rgba(209, 48, 52, 0.8);
-    }
-
-    footer {
-      background-color: #181818;
-      color: #eee;
-      text-align: center;
-      padding: 1rem 0;
-      font-size: 0.9rem;
-      margin-top: auto;
-      user-select: none;
-    }
-
-    /* Responsivo texto hero */
-    @media (max-width: 576px) {
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-
-      .hero p {
-        font-size: 1.1rem;
-      }
-    }
-  </style>
 </head>
 
 <body class="bould-font">
@@ -197,9 +64,15 @@
     </section>
   </main>
 
-  <a href="produccion.html" class="scroll-top" title="Volver a Producción" aria-label="Volver a Producción">
-    ←
-  </a>
+<button 
+  class="scroll-top" 
+  title="Volver a Producción" 
+  aria-label="Volver a Producción"
+  onclick="window.location.href='produccion.html'">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+    <path d="M15 19l-7-7 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
 
   <footer>
     <p>&copy; 2025 Marsal Studio<br />Sitio Web Creado y proporcionado por Erick Emilio Cisneros Marsal</p>

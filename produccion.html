@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Producción | Marsal Studio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="style2.css" />
+  <link rel="stylesheet" href="style.css" />
   <style>
     /* Servicios */
     .service h2 a {
@@ -42,21 +42,35 @@
       filter: invert(1);
     }
 
-    /* Hero section */
-    .hero {
-      background-image: url('https://www.avisualpro.es/wp-content/uploads/2022/11/blog-produccion.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 60vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-      text-align: center;
-      padding: 0 1rem;
-    }
+.hero {
+  background-image: url('https://www.avisualpro.es/wp-content/uploads/2022/11/blog-produccion.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* Oscurece para mejor contraste */
+  z-index: 1;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 2;
+}
 
     /* Responsive adjustments */
     @media (max-width: 576px) {
@@ -123,7 +137,15 @@
     </section>
   </main>
 
-  <button class="scroll-top" title="Volver arriba" aria-label="Botón para volver arriba" id="scrollTopBtn">↑</button>
+  <button 
+  class="scroll-top" 
+  title="Volver a Inicio" 
+  aria-label="Volver a Inicio"
+  onclick="window.location.href='index.html'">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+    <path d="M15 19l-7-7 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
 
   <footer class="text-center py-4 bg-black text-muted" role="contentinfo">
     <p>&copy; 2025 Marsal Studio <br />Sitio Web Creado y proporcionado por Erick Emilio Cisneros Marsal</p>
@@ -131,22 +153,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
   <script src="site.js" defer></script>
-  <script>
-    // Scroll top button funcional
-    const scrollTopBtn = document.getElementById('scrollTopBtn');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        scrollTopBtn.style.display = 'flex';
-      } else {
-        scrollTopBtn.style.display = 'none';
-      }
-    });
-
-    scrollTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
 </body>
 
 </html>
