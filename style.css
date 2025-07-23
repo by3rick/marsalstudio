@@ -186,42 +186,24 @@ body {
   margin: 0 12px;
 }
 
-/* ============================= */
-/* Hero Section */
-/* ============================= */
 .hero {
+  width: 100%;
+  height: 100vh;
   background-image: url('https://scontent.fpbc5-1.fna.fbcdn.net/v/t39.30808-6/518318058_122243349212018838_8155320136616443490_n.png?_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=1OtWHFaJ-98Q7kNvwGxK6WA&_nc_oc=AdnT9WjX_XVP3G06flLgxpXfv0PGEqN1j1LkywK-if2vx-ALiHTPJqjQNBOjpPQXL1yZ_eKGOL0hXEorW9LvSKIq&_nc_zt=23&_nc_ht=scontent.fpbc5-1.fna&_nc_gid=7K1pksPtkiMCLdpFGapHag&oh=00_AfQxnmZ6D1je2Cg6Ec1_sTr7da0jEGghTgN-SAWLdD6uZQ&oe=68863F49');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  text-align: center;
-  color: white;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  background-attachment: fixed; /* ojo, esto puede no funcionar bien en móviles */
 }
 
-@media (max-width: 576px) {
+/* Responsivo */
+@media (max-width: 430px) {
   .hero {
-    min-height: 70vh;
-    background-position: top;
-    padding: 0.5rem;
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
+    height: 20vh;
+    background-position: top center;
+    background-attachment: scroll; /* mejor para móviles */
   }
 }
-
-
 
 /* ============================= */
 /* Sección Servicios */
