@@ -20,33 +20,12 @@
       color: white;
       outline: none;
     }
-
-    /* Navbar */
-    nav.navbar {
-      background-color: #121212;
-    }
-    .navbar-nav .nav-link {
-      color: #ddd;
-      transition: color 0.3s ease;
-    }
-    .navbar-nav .nav-link:hover,
-    .navbar-nav .nav-link:focus,
-    .navbar-nav .nav-link.active {
-      color: #6d90ff;
-      outline: none;
-    }
-    .navbar-toggler {
-      border-color: #6d90ff;
-    }
-    .navbar-toggler-icon {
-      filter: invert(1);
-    }
-
-.hero {
+    .hero {
   background-image: url('https://www.avisualpro.es/wp-content/uploads/2022/11/blog-produccion.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+background-attachment: fixed;
   width: 100%;
   min-height: 70vh;
   display: flex;
@@ -72,21 +51,24 @@
   z-index: 2;
 }
 
-    /* Responsive adjustments */
-    @media (max-width: 576px) {
-      .hero {
-        height: 50vh;
-      }
-      .service {
-        max-width: 100%;
-      }
-    }
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .hero {
+    min-height: 25vh; /* mejor usar min-height para que no se corte si hay contenido */
+    background-position: top center; /* para que enfoque mejor en móviles */
+  }
+  .service {
+    max-width: 100%;  
+  }
+}
 
-    /* Mejorar enfoque para accesibilidad */
-    a:focus-visible {
-      outline: 2px solid #6d90ff;
-      outline-offset: 2px;
-    }
+/* Mejorar enfoque para accesibilidad */
+a:focus-visible {
+  outline: 2px solid #6d90ff;
+  outline-offset: 2px;
+}
+
+
   </style>
 </head>
 
