@@ -16,8 +16,8 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  width: 100%;
-  min-height: 80vh;
+  width: 100vw;
+  height: 80vh;
   padding: 1rem;
 
   display: flex;
@@ -28,16 +28,14 @@
   color: white;
 }
 
-/* Ajustes para celulares */
 @media (max-width: 576px) {
   .hero {
     background-position: center top;
-    min-height: 60vh;
+    height: 60vh;
     padding: 0.5rem;
-    font-size: 0.9rem; /* Ajusta el tamaño de texto para que no se vea gigante */
+    font-size: 0.9rem;
   }
 
-  /* Si tienes texto o botones dentro, haz que no se desborden */
   .hero * {
     max-width: 90%;
     margin: 0 auto;
