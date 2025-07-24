@@ -59,18 +59,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Reemplaza por tu propia clave pública
-    emailjs.init('Q0KkOnCTCrjfkhRvr');
-
-    formContacto.addEventListener('submit', (e) => {
-      e.preventDefault();
-
 document.addEventListener('DOMContentLoaded', () => {
-  const formContacto = document.getElementById('formContacto'); // el ID de tu formulario
+  const formContacto = document.getElementById('formContacto'); // tu form ID
 
-  emailjs.init('7c1cNA__o6c5csmnB'); // pon tu user ID de EmailJS aquí
+  emailjs.init('7c1cNA__o6c5csmnB'); // tu public key, solo una vez
 
-  if(formContacto){
+  if (formContacto) {
     formContacto.addEventListener('submit', (e) => {
       e.preventDefault();
 
@@ -87,4 +81,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-    })}})
