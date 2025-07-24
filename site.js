@@ -44,33 +44,34 @@ document.addEventListener('DOMContentLoaded', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
+
 document.addEventListener('DOMContentLoaded', () => {
   const btnMostrar = document.getElementById('mostrar-contacto');
   const formContacto = document.getElementById('contacto-form');
 
-  emailjs.init('7c1cNA__o6c5csmnB'); // tu public key, solo una vez
+  emailjs.init('7c1cNA__o6c5csmnB'); // tu public key
 
-  if (btnMostrar && formContacto) {
-    btnMostrar.addEventListener('click', () => {
-      formContacto.classList.toggle('visible');
-      if (formContacto.classList.contains('visible')) {
-        formContacto.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
+  btnMostrar.addEventListener('click', () => {
+    if (formContacto.style.display === 'none') {
+      formContacto.style.display = 'block';
+      formContacto.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      formContacto.style.display = 'none';
+    }
+  });
 
-    formContacto.addEventListener('submit', (e) => {
-      e.preventDefault();
+  formContacto.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-      emailjs.sendForm('service_pkp4pkm', 'template_lxnn9kh', formContacto)
-        .then(() => {
-          alert('Correo enviado con éxito');
-          formContacto.reset();
-          formContacto.classList.remove('visible');
-        })
-        .catch(err => {
-          console.error('Error al enviar:', err);
-          alert('Error al enviar: ' + (err?.text || 'Revisa la consola'));
-        });
-    });
-  }
+    emailjs.sendForm('service_pkp4pkm', 'template_lxnn9kh', formContacto)
+      .then(() => {
+        alert('Correo enviado con éxito');
+        formContacto.reset();
+        formContacto.style.display = 'none';
+      })
+      .catch(err => {
+        console.error('Error al enviar:', err);
+        alert('Error al enviar: ' + (err?.text || 'Revisa la consola'));
+      });
+  });
 });
