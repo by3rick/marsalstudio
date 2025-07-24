@@ -60,13 +60,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Reemplaza por tu propia clave pública
-    emailjs.init('TU_PUBLIC_KEY');
+    emailjs.init('Q0KkOnCTCrjfkhRvr');
 
     formContacto.addEventListener('submit', (e) => {
       e.preventDefault();
 
       // Reemplaza con tu propio service y template ID
-      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formContacto)
+      emailjs.sendForm('service_pkp4pkm', 'template_38bkze3', formContacto)
         .then(() => {
           alert(' Correo enviado con éxito');
           formContacto.reset();

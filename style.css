@@ -1,591 +1,591 @@
-/* ============================= */
-/* Paleta de colores oficial */
-/* ============================= */
-:root {
-  --marsal-dark: #17171C;
-  --marsal-red: #FF0808;
-  --text-light: #f1f1f1;
-  --accent-blue: #6d90ff;
-  --text-soft: #bbbbbb;
-  --text-muted: #c4c4c4;
-  --bg-soft: #222;
-  --bg-base: #111;
-}
+  /* ============================= */
+  /* Paleta de colores oficial */
+  /* ============================= */
+  :root {
+    --marsal-dark: #17171C;
+    --marsal-red: #FF0808;
+    --text-light: #f1f1f1;
+    --accent-blue: #6d90ff;
+    --text-soft: #bbbbbb;
+    --text-muted: #c4c4c4;
+    --bg-soft: #222;
+    --bg-base: #111;
+  }
 
-@font-face {
-  font-family: 'Bould';
-  src: url('fonts/Bould-Bold.woff2') format('woff2'),
-       url('fonts/Bould-Bold.woff') format('woff'),
-       url('fonts/Bould-Bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
+  @font-face {
+    font-family: 'Bould';
+    src: url('fonts/Bould-Bold.woff2') format('woff2'),
+        url('fonts/Bould-Bold.woff') format('woff'),
+        url('fonts/Bould-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
 
-@font-face {
-  font-family: 'Bould';
-  src: url('fonts/Bould-BoldItalic.woff2') format('woff2'),
-       url('fonts/Bould-BoldItalic.woff') format('woff'),
-       url('fonts/Bould-BoldItalic.otf') format('opentype');
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-}
+  @font-face {
+    font-family: 'Bould';
+    src: url('fonts/Bould-BoldItalic.woff2') format('woff2'),
+        url('fonts/Bould-BoldItalic.woff') format('woff'),
+        url('fonts/Bould-BoldItalic.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+  }
 
-@font-face {
-  font-family: 'Bould';
-  src: url('fonts/Bould-ExtraLight.woff2') format('woff2'),
-       url('fonts/Bould-ExtraLight.woff') format('woff'),
-       url('fonts/Bould-ExtraLight.otf') format('opentype');
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
+  @font-face {
+    font-family: 'Bould';
+    src: url('fonts/Bould-ExtraLight.woff2') format('woff2'),
+        url('fonts/Bould-ExtraLight.woff') format('woff'),
+        url('fonts/Bould-ExtraLight.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+  }
 
-@font-face {
-  font-family: 'Bould';
-  src: url('fonts/Bould-ExtraLightItalic.woff2') format('woff2'),
-       url('fonts/Bould-ExtraLightItalic.woff') format('woff'),
-       url('fonts/Bould-ExtraLightItalic.otf') format('opentype');
-  font-weight: 200;
-  font-style: italic;
-  font-display: swap;
-}
+  @font-face {
+    font-family: 'Bould';
+    src: url('fonts/Bould-ExtraLightItalic.woff2') format('woff2'),
+        url('fonts/Bould-ExtraLightItalic.woff') format('woff'),
+        url('fonts/Bould-ExtraLightItalic.otf') format('opentype');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+  }
 
-@font-face {
-  font-family: 'Bould';
-  src: url('fonts/Bould-Light.woff2') format('woff2'),
-       url('fonts/Bould-Light.woff') format('woff'),
-       url('fonts/Bould-Light.otf') format('opentype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
+  @font-face {
+    font-family: 'Bould';
+    src: url('fonts/Bould-Light.woff2') format('woff2'),
+        url('fonts/Bould-Light.woff') format('woff'),
+        url('fonts/Bould-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
 
-@font-face {
-  font-family: 'Bould';
-  src: url('fonts/Bould-LightItalic.woff2') format('woff2'),
-       url('fonts/Bould-LightItalic.woff') format('woff'),
-       url('fonts/Bould-LightItalic.otf') format('opentype');
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
+  @font-face {
+    font-family: 'Bould';
+    src: url('fonts/Bould-LightItalic.woff2') format('woff2'),
+        url('fonts/Bould-LightItalic.woff') format('woff'),
+        url('fonts/Bould-LightItalic.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+  }
 
-@font-face {
-  font-family: 'Bould';
-  src: url('fonts/Bould-Medium.woff2') format('woff2'),
-       url('fonts/Bould-Medium.woff') format('woff'),
-       url('fonts/Bould-Medium.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
+  @font-face {
+    font-family: 'Bould';
+    src: url('fonts/Bould-Medium.woff2') format('woff2'),
+        url('fonts/Bould-Medium.woff') format('woff'),
+        url('fonts/Bould-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
 
-@font-face {
-  font-family: 'Bould';
-  src: url('fonts/Bould-MediumItalic.woff2') format('woff2'),
-       url('fonts/Bould-MediumItalic.woff') format('woff'),
-       url('fonts/Bould-MediumItalic.otf') format('opentype');
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
+  @font-face {
+    font-family: 'Bould';
+    src: url('fonts/Bould-MediumItalic.woff2') format('woff2'),
+        url('fonts/Bould-MediumItalic.woff') format('woff'),
+        url('fonts/Bould-MediumItalic.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+  }
 
-@font-face {
-  font-family: 'Bould';
-  src: url('fonts/Bould-Regular.woff2') format('woff2'),
-       url('fonts/Bould-Regular.woff') format('woff'),
-       url('fonts/Bould-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+  @font-face {
+    font-family: 'Bould';
+    src: url('fonts/Bould-Regular.woff2') format('woff2'),
+        url('fonts/Bould-Regular.woff') format('woff'),
+        url('fonts/Bould-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
 
-@font-face {
-  font-family: 'Bould';
-  src: url('fonts/Bould-RegularItalic.woff2') format('woff2'),
-       url('fonts/Bould-RegularItalic.woff') format('woff'),
-       url('fonts/Bould-RegularItalic.otf') format('opentype');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
+  @font-face {
+    font-family: 'Bould';
+    src: url('fonts/Bould-RegularItalic.woff2') format('woff2'),
+        url('fonts/Bould-RegularItalic.woff') format('woff'),
+        url('fonts/Bould-RegularItalic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
 
-@font-face {
-  font-family: 'Bould';
-  src: url('fonts/Bould-SemiBold.woff2') format('woff2'),
-       url('fonts/Bould-SemiBold.woff') format('woff'),
-       url('fonts/Bould-SemiBold.otf') format('opentype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
+  @font-face {
+    font-family: 'Bould';
+    src: url('fonts/Bould-SemiBold.woff2') format('woff2'),
+        url('fonts/Bould-SemiBold.woff') format('woff'),
+        url('fonts/Bould-SemiBold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
 
-@font-face {
-  font-family: 'Bould';
-  src: url('fonts/Bould-SemiBoldItalic.woff2') format('woff2'),
-       url('fonts/Bould-SemiBoldItalic.woff') format('woff'),
-       url('fonts/Bould-SemiBoldItalic.otf') format('opentype');
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
-}
+  @font-face {
+    font-family: 'Bould';
+    src: url('fonts/Bould-SemiBoldItalic.woff2') format('woff2'),
+        url('fonts/Bould-SemiBoldItalic.woff') format('woff'),
+        url('fonts/Bould-SemiBoldItalic.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+  }
 
-@font-face {
-  font-family: 'Bould';
-  src: url('fonts/Bould-Thin.woff2') format('woff2'),
-       url('fonts/Bould-Thin.woff') format('woff'),
-       url('fonts/Bould-Thin.otf') format('opentype');
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
+  @font-face {
+    font-family: 'Bould';
+    src: url('fonts/Bould-Thin.woff2') format('woff2'),
+        url('fonts/Bould-Thin.woff') format('woff'),
+        url('fonts/Bould-Thin.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+  }
 
-@font-face {
-  font-family: 'Bould';
-  src: url('fonts/Bould-ThinItalic.woff2') format('woff2'),
-       url('fonts/Bould-ThinItalic.woff') format('woff'),
-       url('fonts/Bould-ThinItalic.otf') format('opentype');
-  font-weight: 100;
-  font-style: italic;
-  font-display: swap;
-}
+  @font-face {
+    font-family: 'Bould';
+    src: url('fonts/Bould-ThinItalic.woff2') format('woff2'),
+        url('fonts/Bould-ThinItalic.woff') format('woff'),
+        url('fonts/Bould-ThinItalic.otf') format('opentype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+  }
 
-/* ============================= */
-/* Estructura base */
-/* ============================= */
-html {
-  scroll-behavior: smooth;
-}
+  /* ============================= */
+  /* Estructura base */
+  /* ============================= */
+  html {
+    scroll-behavior: smooth;
+  }
 
-body {
-  margin: 0;
-  background-color: var(--bg-base);
-  color: var(--text-light);
-  font-family: 'Bould', sans-serif;
-}
+  body {
+    margin: 0;
+    background-color: var(--bg-base);
+    color: var(--text-light);
+    font-family: 'Bould', sans-serif;
+  }
 
-/* ============================= */
-/* Navbar */
-/* ============================= */
-.navbar {
-  background-color: var(--marsal-dark) !important;
-}
+  /* ============================= */
+  /* Navbar */
+  /* ============================= */
+  .navbar {
+    background-color: var(--marsal-dark) !important;
+  }
 
-.navbar-brand,
-.nav-link {
-  color: #f0f0f0 !important;
-}
+  .navbar-brand,
+  .nav-link {
+    color: #f0f0f0 !important;
+  }
 
-.nav-link:hover {
-  color: var(--accent-blue);
-}
+  .nav-link:hover {
+    color: var(--accent-blue);
+  }
 
-.navbar-nav .nav-link {
-  margin: 0 12px;
-}
+  .navbar-nav .nav-link {
+    margin: 0 12px;
+  }
 
-.hero {
-  min-height: 100vh;
-  background-image: url('imagenes/background.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Celulares */
-@media (max-width: 600px) {
   .hero {
-    background-image: url('imagenes/backgroundcel.png');
-    background-size: contain; /* <- No estira, respeta proporciones */
-    background-position: top center;
+    min-height: 100vh;
+    background-image: url('imagenes/background.png');
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    height: auto; /* <- Se adapta al contenido */
-    padding: 2rem 1rem;
-  }
-}
-
-
-/* ============================= */
-/* Sección Servicios */
-/* ============================= */
-.services {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 60px 20px;
-  background-color: var(--bg-base);
-}
-
-.service {
-  flex: 1 1 300px;
-  max-width: 400px;
-  margin: 20px;
-  background-color: var(--bg-soft);
-  padding: 30px;
-  border-radius: 10px;
-  text-align: center;
-  color: var(--text-light);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(109, 144, 255, 0.5);
-}
-
-.service h2 {
-  color: var(--accent-blue);
-}
-
-/* ============================= */
-/* Acerca de nosotros */
-/* ============================= */
-.about-us {
-  background-color: var(--bg-base);
-  color: var(--text-light);
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.about-us h2 {
-  color: var(--accent-blue);
-}
-
-/* ============================= */
-/* Galería */
-/* ============================= */
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 40px 20px;
-  background-color: var(--bg-base);
-}
-
-.gallery-item {
-  position: relative;
-  width: 300px;
-  height: 225px;
-  border-radius: 12px;
-  overflow: hidden;
-  background-color: var(--bg-soft);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  padding: 15px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.gallery-item img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: 0;
-  filter: brightness(0.5);
-}
-
-.gallery-item .big-text {
-  z-index: 1;
-  font-size: clamp(1.4rem, 5vw, 2rem);
-  font-weight: 700;
-  color: white;
-}
-
-.gallery-item .small-text {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  right: 15px;
-  font-size: 0.9rem;
-  color: #ddd;
-  opacity: 0.85;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-  z-index: 1;
-}
-
-.gallery-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
-}
-
-/* ============================= */
-/* Caja de contacto */
-/* ============================= */
-#contacto-form {
-  background-color: var(--bg-base);
-  padding: 40px 30px;
-  color: var(--text-light);
-  max-width: 600px;
-  margin: 40px auto;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  display: none;
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: opacity 0.6s ease, transform 0.4s ease;
-  will-change: opacity, transform;
-}
-
-#contacto-form.visible {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-#contacto-form h2 {
-  color: var(--accent-blue);
-  text-align: center;
-  margin-bottom: 30px;
-  font-weight: 700;
-  font-size: 2rem;
-}
-
-#contacto-form label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: 600;
-  color: var(--text-soft);
-}
-
-#contacto-form input,
-#contacto-form textarea {
-  width: 100%;
-  padding: 14px 18px;
-  border-radius: 10px;
-  border: none;
-  background-color: var(--bg-soft);
-  color: var(--text-light);
-  font-size: 1rem;
-  resize: vertical;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.7);
-  transition: background-color 0.4s ease, box-shadow 0.4s ease;
-}
-
-#contacto-form input::placeholder,
-#contacto-form textarea::placeholder {
-  color: var(--text-muted);
-  font-style: italic;
-}
-
-#contacto-form input:focus,
-#contacto-form textarea:focus {
-  outline: none;
-  background-color: #2a2a3a;
-  box-shadow: 0 0 12px var(--accent-blue);
-}
-
-#contacto-form button {
-  display: block;
-  margin: 30px auto 0;
-  background-color: var(--marsal-red);
-  color: white;
-  border: none;
-  padding: 16px 0;
-  width: 180px;
-  border-radius: 12px;
-  font-weight: 800;
-  font-size: 1.2rem;
-  cursor: pointer;
-  letter-spacing: 0.7px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
-}
-
-#contacto-form button:hover {
-  background-color: #cc0707;
-  box-shadow: 0 0 20px var(--marsal-red);
-  transform: scale(1.05);
-}
-
-#mostrar-contacto {
-  display: block;
-  margin: 40px auto;
-  width: 180px;
-  background-color: var(--marsal-red);
-  color: white;
-  border: none;
-  padding: 16px 0;
-  border-radius: 12px;
-  font-weight: 800;
-  font-size: 1.2rem;
-  cursor: pointer;
-  letter-spacing: 0.7px;
-
-}
-
-#mostrar-contacto:hover {
-  background-color: #cc0707;
-  box-shadow: 0 0 20px var(--marsal-red);
-  transform: scale(1.05);
-}
-
-
-.scroll-top {
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  width: 50px;
-  height: 50px;
-  background-color: var(--marsal-red);
-  color: #fff;
-  font-size: 1.5rem;
-  text-decoration: none;
-  box-shadow: 0 4px 12px rgba(109, 144, 255, 0.6);
-  border-radius: 50%;
-  display: flex; /* centra contenido */
-  align-items: center; /* centra verticalmente */
-  justify-content: center; /* centra horizontalmente */
-  z-index: 1000;
-  transition: transform 0.3s ease;
-}
-
-.scroll-top:hover {
-  transform: translateY(-4px);
-}
-
-/* ============================= */
-/*  Botones generales */
-/* ============================= */
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: var(--marsal-red);
-  color: #fff !important;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: transform 0.3s ease,
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px var(--marsal-red);
-}
-
-/* ============================= */
-/* Redes Sociales */
-/* ============================= */
-.social-links a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.social-links a svg {
-  transition: fill 0.3s ease;
-}
-
-.social-links a:hover {
-  color: var(--marsal-red);
-  text-decoration: underline;
-}
-
-.social-links a:hover svg {
-  fill: var(--marsal-red);
-}
-
-footer {
-  background-color: #000;
-  color: var(--text-muted);
-  text-align: center;
-  padding: 30px 20px;
-  font-size: 0.9rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1); /* línea sutil */
-}
-
-footer a {
-  color: var(--accent-blue);
-  text-decoration: none;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
-}
-
-footer a:hover {
-  text-decoration: underline;
-  color: var(--accent-red); /* Si quieres más interacción visual */
-}
-
-/* ============================= */
-/*  Animaciones */
-/* ============================= */
-.invisible {
-  opacity: 0;
-  transform: scale(0.95);
-}
-
-.fade-in {
-  opacity: 1 !important;
-  transform: translateY(0);
-}
-
-.zoom-in {
-  transform: scale(1);
-  opacity: 1;
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-}
-
-.bounce-in {
-  animation: bounce-in 0.6s ease;
-}
-
-@keyframes bounce-in {
-  0% {
-    transform: scale(0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    transition: all 0.3s ease-in-out;
   }
 
-  60% {
+  /* Celulares */
+  @media (max-width: 600px) {
+    .hero {
+      background-image: url('imagenes/backgroundcel.png');
+      background-size: contain; /* <- No estira, respeta proporciones */
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      height: auto; /* <- Se adapta al contenido */
+      padding: 2rem 1rem;
+    }
+  }
+
+
+  /* ============================= */
+  /* Sección Servicios */
+  /* ============================= */
+  .services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 60px 20px;
+    background-color: var(--bg-base);
+  }
+
+  .service {
+    flex: 1 1 300px;
+    max-width: 400px;
+    margin: 20px;
+    background-color: var(--bg-soft);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    color: var(--text-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(109, 144, 255, 0.5);
+  }
+
+  .service h2 {
+    color: var(--accent-blue);
+  }
+
+  /* ============================= */
+  /* Acerca de nosotros */
+  /* ============================= */
+  .about-us {
+    background-color: var(--bg-base);
+    color: var(--text-light);
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .about-us h2 {
+    color: var(--accent-blue);
+  }
+
+  /* ============================= */
+  /* Galería */
+  /* ============================= */
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: var(--bg-base);
+  }
+
+  .gallery-item {
+    position: relative;
+    width: 300px;
+    height: 225px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--bg-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gallery-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    filter: brightness(0.5);
+  }
+
+  .gallery-item .big-text {
+    z-index: 1;
+    font-size: clamp(1.4rem, 5vw, 2rem);
+    font-weight: 700;
+    color: white;
+  }
+
+  .gallery-item .small-text {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    font-size: 0.9rem;
+    color: #ddd;
+    opacity: 0.85;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    z-index: 1;
+  }
+
+  .gallery-item:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
   }
 
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes fadeUp {
-  0% {
+  /* ============================= */
+  /* Caja de contacto */
+  /* ============================= */
+  #contacto-form {
+    background-color: var(--bg-base);
+    padding: 40px 30px;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    display: none;
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(-20px);
+    transition: opacity 0.6s ease, transform 0.4s ease;
+    will-change: opacity, transform;
   }
 
-  100% {
+  #contacto-form.visible {
+    display: block;
     opacity: 1;
     transform: translateY(0);
   }
-}
 
-.motion-fade-up {
-  animation: fadeUp 0.6s ease forwards;
-}
-
-@keyframes scaleIn {
-  0% {
-    transform: scale(0.95);
-    opacity: 0;
+  #contacto-form h2 {
+    color: var(--accent-blue);
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 2rem;
   }
 
-  100% {
+  #contacto-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-soft);
+  }
+
+  #contacto-form input,
+  #contacto-form textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--bg-soft);
+    color: var(--text-light);
+    font-size: 1rem;
+    resize: vertical;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.7);
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  #contacto-form input::placeholder,
+  #contacto-form textarea::placeholder {
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  #contacto-form input:focus,
+  #contacto-form textarea:focus {
+    outline: none;
+    background-color: #2a2a3a;
+    box-shadow: 0 0 12px var(--accent-blue);
+  }
+
+  #contacto-form button {
+    display: block;
+    margin: 30px auto 0;
+    background-color: var(--marsal-red);
+    color: white;
+    border: none;
+    padding: 16px 0;
+    width: 180px;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 1.2rem;
+    cursor: pointer;
+    letter-spacing: 0.7px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  }
+
+  #contacto-form button:hover {
+    background-color: #cc0707;
+    box-shadow: 0 0 20px var(--marsal-red);
+    transform: scale(1.05);
+  }
+
+  #mostrar-contacto {
+    display: block;
+    margin: 40px auto;
+    width: 180px;
+    background-color: var(--marsal-red);
+    color: white;
+    border: none;
+    padding: 16px 0;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 1.2rem;
+    cursor: pointer;
+    letter-spacing: 0.7px;
+
+  }
+
+  #mostrar-contacto:hover {
+    background-color: #cc0707;
+    box-shadow: 0 0 20px var(--marsal-red);
+    transform: scale(1.05);
+  }
+
+
+  .scroll-top {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--marsal-red);
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(109, 144, 255, 0.6);
+    border-radius: 50%;
+    display: flex; /* centra contenido */
+    align-items: center; /* centra verticalmente */
+    justify-content: center; /* centra horizontalmente */
+    z-index: 1000;
+    transition: transform 0.3s ease;
+  }
+
+  .scroll-top:hover {
+    transform: translateY(-4px);
+  }
+
+  /* ============================= */
+  /*  Botones generales */
+  /* ============================= */
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--marsal-red);
+    color: #fff !important;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease,
+  }
+
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px var(--marsal-red);
+  }
+
+  /* ============================= */
+  /* Redes Sociales */
+  /* ============================= */
+  .social-links a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .social-links a svg {
+    transition: fill 0.3s ease;
+  }
+
+  .social-links a:hover {
+    color: var(--marsal-red);
+    text-decoration: underline;
+  }
+
+  .social-links a:hover svg {
+    fill: var(--marsal-red);
+  }
+
+  footer {
+    background-color: #000;
+    color: var(--text-muted);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* línea sutil */
+  }
+
+  footer a {
+    color: var(--accent-blue);
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+    color: var(--accent-red); /* Si quieres más interacción visual */
+  }
+
+  /* ============================= */
+  /*  Animaciones */
+  /* ============================= */
+  .invisible {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  .fade-in {
+    opacity: 1 !important;
+    transform: translateY(0);
+  }
+
+  .zoom-in {
     transform: scale(1);
     opacity: 1;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
   }
-}
 
-.motion-scale-in {
-  animation: scaleIn 0.5s ease forwards;
-}
+  .bounce-in {
+    animation: bounce-in 0.6s ease;
+  }
+
+  @keyframes bounce-in {
+    0% {
+      transform: scale(0.8);
+    }
+
+    60% {
+      transform: scale(1.05);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .motion-fade-up {
+    animation: fadeUp 0.6s ease forwards;
+  }
+
+  @keyframes scaleIn {
+    0% {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .motion-scale-in {
+    animation: scaleIn 0.5s ease forwards;
+  }
