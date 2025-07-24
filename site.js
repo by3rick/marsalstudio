@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
 
       // Reemplaza con tu propio service y template ID
-      emailjs.sendForm('service_pkp4pkm', 'template_38bkze3', formContacto)
+      emailjs.sendForm('service_pkp4pkm', 'template_lxnn9kh', formContacto)
         .then(() => {
           alert(' Correo enviado con éxito');
           formContacto.reset();
