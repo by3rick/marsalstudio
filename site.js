@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 document.addEventListener('DOMContentLoaded', () => {
   const btnMostrar = document.getElementById('mostrar-contacto');
-const formContacto = document.getElementById('contacto-form');
+  const formContacto = document.getElementById('contacto-form');
 
   emailjs.init('7c1cNA__o6c5csmnB'); // tu public key, solo una vez
 
@@ -73,4 +73,4 @@ const formContacto = document.getElementById('contacto-form');
         });
     });
   }
-});})
+});
