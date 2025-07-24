@@ -65,17 +65,26 @@ document.addEventListener('DOMContentLoaded', () => {
     formContacto.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      // Reemplaza con tu propio service y template ID
+document.addEventListener('DOMContentLoaded', () => {
+  const formContacto = document.getElementById('formContacto'); // el ID de tu formulario
+
+  emailjs.init('7c1cNA__o6c5csmnB'); // pon tu user ID de EmailJS aquí
+
+  if(formContacto){
+    formContacto.addEventListener('submit', (e) => {
+      e.preventDefault();
+
       emailjs.sendForm('service_pkp4pkm', 'template_lxnn9kh', formContacto)
         .then(() => {
-          alert(' Correo enviado con éxito');
+          alert('Correo enviado con éxito');
           formContacto.reset();
           formContacto.classList.remove('visible');
         })
         .catch(err => {
-          console.error(' Error al enviar:', err);
-          alert('Error al enviar: ' + (err?.text || 'Ver consola'));
+          console.error('Error al enviar:', err);
+          alert('Error al enviar: ' + (err?.text || 'Revisa la consola'));
         });
     });
   }
 });
+    })}})
