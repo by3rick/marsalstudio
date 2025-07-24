@@ -44,12 +44,11 @@ document.addEventListener('DOMContentLoaded', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
-
-  // ===============================
-  // Mostrar y enviar formulario con EmailJS
-  // ===============================
+document.addEventListener('DOMContentLoaded', () => {
   const btnMostrar = document.getElementById('mostrar-contacto');
-  const formContacto = document.getElementById('contacto-form');
+  const formContacto = document.getElementById('contacto-form'); // usa un solo ID en tu HTML
+
+  emailjs.init('7c1cNA__o6c5csmnB'); // tu public key, solo una vez
 
   if (btnMostrar && formContacto) {
     btnMostrar.addEventListener('click', () => {
@@ -59,12 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const formContacto = document.getElementById('formContacto'); // tu form ID
-
-  emailjs.init('7c1cNA__o6c5csmnB'); // tu public key, solo una vez
-
-  if (formContacto) {
     formContacto.addEventListener('submit', (e) => {
       e.preventDefault();
 
@@ -80,4 +73,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
   }
-});
+});})
