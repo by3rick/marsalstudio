@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ===============================
-  //  Botón Scroll-Top con audio
+  // Botón Scroll-Top con audio
   // ===============================
   const scrollTopBtn = document.querySelector('.scroll-top');
 
@@ -35,43 +35,45 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     scrollTopBtn.addEventListener('click', () => {
-      // Audio divertido opcional
       const audio = new Audio('https://assets.mixkit.co/active_storage/sfx/1793/1793-preview.mp3');
       audio.volume = 0.3;
       audio.play();
 
-      // Scroll suave al top
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 
-document.addEventListener('DOMContentLoaded', () => {
+ // ===============================
+  // Mostrar y enviar formulario con EmailJS
+  // ===============================
   const btnMostrar = document.getElementById('mostrar-contacto');
   const formContacto = document.getElementById('contacto-form');
 
-  emailjs.init('7c1cNA__o6c5csmnB'); // tu public key
+  if (btnMostrar && formContacto) {
+    btnMostrar.addEventListener('click', () => {
+      formContacto.classList.toggle('visible');
+      if (formContacto.classList.contains('visible')) {
+        formContacto.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
 
-  btnMostrar.addEventListener('click', () => {
-    if (formContacto.style.display === 'none') {
-      formContacto.style.display = 'block';
-      formContacto.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      formContacto.style.display = 'none';
-    }
+     // Reemplaza por tu propia clave pública
+    emailjs.init('Q0KkOnCTCrjfkhRvr');
+
+    formContacto.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Reemplaza con tu propio service y template ID
+      emailjs.sendForm('service_pkp4pkm', 'template_38bkze3', formContacto)
+        .then(() => {
+          alert(' Correo enviado con éxito');
+          formContacto.reset();
+          formContacto.classList.remove('visible');
+        })
+        .catch(err => {
+          console.error(' Error al enviar:', err);
+          alert('Error al enviar: ' + (err?.text || 'Ver consola'));
+        });
+    });
   });
-
-  formContacto.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm('service_pkp4pkm', 'template_lxnn9kh', formContacto)
-      .then(() => {
-        alert('Correo enviado con éxito');
-        formContacto.reset();
-        formContacto.style.display = 'none';
-      })
-      .catch(err => {
-        console.error('Error al enviar:', err);
-        alert('Error al enviar: ' + (err?.text || 'Revisa la consola'));
-      });
-  });
-});
