@@ -38,42 +38,55 @@ document.addEventListener('DOMContentLoaded', () => {
       const audio = new Audio('https://assets.mixkit.co/active_storage/sfx/1793/1793-preview.mp3');
       audio.volume = 0.3;
       audio.play();
-
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 
- // ===============================
-  // Mostrar y enviar formulario con EmailJS
   // ===============================
-  const btnMostrar = document.getElementById('mostrar-contacto');
-  const formContacto = document.getElementById('contacto-form');
+  // Mostrar/Ocultar Formulario de Contacto
+  // ===============================
+  const botonMostrar = document.getElementById("mostrar-contacto");
+  const formulario = document.getElementById("contacto-form");
 
-  if (btnMostrar && formContacto) {
-    btnMostrar.addEventListener('click', () => {
-      formContacto.classList.toggle('visible');
-      if (formContacto.classList.contains('visible')) {
-        formContacto.scrollIntoView({ behavior: 'smooth' });
+  if (botonMostrar && formulario) {
+    botonMostrar.addEventListener("click", () => {
+      if (formulario.classList.contains("visible")) {
+        formulario.classList.remove("visible");
+        setTimeout(() => {
+          formulario.style.display = "none";
+        }, 400);
+        botonMostrar.textContent = "Contactar";
+      } else {
+        formulario.style.display = "block";
+        setTimeout(() => {
+          formulario.classList.add("visible");
+        }, 10);
+        botonMostrar.textContent = "Cerrar";
       }
     });
   }
+});
+const formulario = document.getElementById("contacto-form");
 
-     // Reemplaza por tu propia clave pública
-    emailjs.init('Q0KkOnCTCrjfkhRvr');
+formulario.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-    formContacto.addEventListener('submit', (e) => {
-      e.preventDefault();
+  const formData = new FormData(formulario);
 
-      // Reemplaza con tu propio service y template ID
-      emailjs.sendForm('service_pkp4pkm', 'template_38bkze3', formContacto)
-        .then(() => {
-          alert(' Correo enviado con éxito');
-          formContacto.reset();
-          formContacto.classList.remove('visible');
-        })
-        .catch(err => {
-          console.error(' Error al enviar:', err);
-          alert('Error al enviar: ' + (err?.text || 'Ver consola'));
-        });
+  try {
+    const response = await fetch(formulario.action, {
+      method: "POST",
+      body: formData,
+      headers: { 'Accept': 'application/json' }
     });
-  });
+
+    if (response.ok) {
+      alert("¡Mensaje enviado con éxito!");
+      formulario.reset();
+    } else {
+      alert("Error al enviar el mensaje, intenta más tarde.");
+    }
+  } catch (error) {
+    alert("Error de red, revisa tu conexión.");
+  }
+});

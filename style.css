@@ -327,26 +327,26 @@
   /* ============================= */
   /* Caja de contacto */
   /* ============================= */
-  #contacto-form {
-    background-color: var(--bg-base);
-    padding: 40px 30px;
-    color: var(--text-light);
-    max-width: 600px;
-    margin: 40px auto;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-    display: none;
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: opacity 0.6s ease, transform 0.4s ease;
-    will-change: opacity, transform;
-  }
+#contacto-form {
+  background-color: var(--bg-base);
+  padding: 40px 30px;
+  color: var(--text-light);
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+  transition: opacity 0.6s ease, transform 0.4s ease;
+  will-change: opacity, transform;
+}
 
-  #contacto-form.visible {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-  }
+#contacto-form.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
 
   #contacto-form h2 {
     color: var(--accent-blue);
