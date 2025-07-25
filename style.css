@@ -186,32 +186,32 @@
     margin: 0 12px;
   }
 
+.hero {
+  min-height: 100vh;
+  background-image: url('imagenes/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Celulares */
+@media (max-width: 600px) {
   .hero {
-    min-height: 100vh;
-    background-image: url('imagenes/background.png');
-    background-size: cover;
-    background-position: center;
+    background-image: url('imagenes/backgroundcel.png');
+    background-size: contain; /* conserva contain */
+    background-position: top center;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    transition: all 0.3s ease-in-out;
+    height: 100vh; /* fuerza que ocupe toda la pantalla */
+    padding: 2rem 1rem;
   }
-
-  /* Celulares */
-  @media (max-width: 600px) {
-    .hero {
-      background-image: url('imagenes/backgroundcel.png');
-      background-size: contain; /* <- No estira, respeta proporciones */
-      background-position: top center;
-      background-repeat: no-repeat;
-      background-attachment: scroll;
-      height: auto; /* <- Se adapta al contenido */
-      padding: 2rem 1rem;
-    }
-  }
+}
 
 
   /* ============================= */
