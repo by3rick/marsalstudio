@@ -81,10 +81,10 @@ formulario.addEventListener("submit", async (e) => {
     });
 
     if (response.ok) {
-      alert("¡Mensaje enviado con éxito!");
+      alert("¡Proyecto enviado con éxito!");
       formulario.reset();
     } else {
-      alert("Error al enviar el mensaje, intenta más tarde.");
+      alert("Error al enviar el Proyecto, intenta más tarde.");
     }
   } catch (error) {
     alert("Error de red, revisa tu conexión.");
