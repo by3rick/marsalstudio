@@ -5,34 +5,79 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Spots Comerciales | Marsal Studio</title>
-  <link rel="stylesheet" href="style.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Variables básicas para claro/oscuro */
+    :root {
+      --accent-blue: #3b82f6;
+      --text-light: #f0f0f0;
+      --text-soft: #cccccc;
+      --bg-dark: #121212;
+      --bg-light: #ffffff;
+      --marsal-red:  #FF0808;
+    }
+
+    /* Hero principal */
+    .hero-spot {
+      min-height: 70vh;
+      background-image: url('https://tierrafilms.pe/images/services/spots/mobile/spots_01.webp');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      position: relative;
+      color: var(--text-light);
+      text-align: center;
+      z-index: 1;
+    }
+
+    .hero-spot::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    .hero-spot h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      color: var(--accent-blue);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 3px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    .hero-spot p {
+      font-size: clamp(1rem, 3vw, 1.6rem);
+      color: var(--text-soft);
+      font-weight: 300;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    }
+  </style>
 </head>
 
-<body class="bould-font">
+<body class="bould-font bg-dark text-white">
   <header>
     <nav class="navbar navbar-expand-lg px-3">
       <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <img
-            src="https://scontent.fpbc5-1.fna.fbcdn.net/v/t39.30808-6/519505898_705288845836185_1023547191803377491_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ZH0Vfo6Ui5AQ7kNvwFGnpT5&_nc_oc=Adk4vWSyMOlOiMPDVk2oVEhT3B-w8l-Ch3TMmT0KnA3QQD2WnmyxMR7LV8WnF2jEvmj9c9SbJl3FW21CRDEYAMxR&_nc_zt=23&_nc_ht=scontent.fpbc5-1.fna&_nc_gid=p74RzI6UUuuTdujgXiSUUw&oh=00_AfS5pgxUbQOvmYrEihe1D-lR5oHdQJ8IU3nS9X0Sov1LtA&oe=6881DCBA"
-            alt="Logo Marsal Studio" height="40" class="me-2" />
+          <img src="https://scontent.fpbc5-1.fna.fbcdn.net/v/t39.30808-6/519505898_705288845836185_1023547191803377491_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ZH0Vfo6Ui5AQ7kNvwFGnpT5&_nc_oc=Adk4vWSyMOlOiMPDVk2oVEhT3B-w8l-Ch3TMmT0KnA3QQD2WnmyxMR7LV8WnF2jEvmj9c9SbJl3FW21CRDEYAMxR&_nc_zt=23&_nc_ht=scontent.fpbc5-1.fna&_nc_gid=p74RzI6UUuuTdujgXiSUUw&oh=00_AfS5pgxUbQOvmYrEihe1D-lR5oHdQJ8IU3nS9X0Sov1LtA&oe=6881DCBA" alt="Logo Marsal Studio" height="40" class="me-2" />
           Marsal Studio
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link btn" href="index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link btn" href="fotografia.html">Fotografía</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link btn" href="index.html#contacto">Contacto</a>
-            </li>
+            <li class="nav-item"><a class="nav-link btn" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link btn" href="fotografia.html">Fotografía</a></li>
+            <li class="nav-item"><a class="nav-link btn" href="index.html#contacto">Contacto</a></li>
           </ul>
         </div>
       </div>
@@ -40,39 +85,27 @@
   </header>
 
   <main>
-<section class="hero d-flex flex-column justify-content-center align-items-center text-white text-center"
-  style="
-    background-image: url('https://tierrafilms.pe/images/services/spots/mobile/spots_01.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    min-height: 70vh;
-    position: relative;
-    padding: 2rem;
-  ">
-  <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.5); z-index: 1;"></div>
-  <div style="position: relative; z-index: 2;">
-    <h1>Spots Comerciales</h1>
-    <p>Publicidad que capta, vende y deja huella.</p>
-  </div>
-</section>
+    <section class="hero-spot">
+      <h1>Spots Comerciales</h1>
+      <p>Publicidad que capta, vende y deja huella.</p>
+    </section>
 
-    <section class="services">
-      <div class="service glass motion-fade-up">
+    <section class="services container py-5">
+      <div class="service glass motion-fade-up mb-4 p-4 rounded">
         <h2>¿Qué es?</h2>
         <p>Un spot es un video breve, visualmente impactante, ideal para redes sociales, YouTube o TV.</p>
       </div>
-      <div class="service glass motion-fade-up">
+      <div class="service glass motion-fade-up mb-4 p-4 rounded">
         <h2>Proceso</h2>
         <p>Guión creativo, grabación con equipo profesional, edición dinámica y entrega optimizada.</p>
       </div>
-      <div class="service glass motion-fade-up">
+      <div class="service glass motion-fade-up mb-4 p-4 rounded">
         <h2>Ideal para</h2>
         <p>Marcas que quieren diferenciarse y conectar con su audiencia en segundos.</p>
       </div>
     </section>
   </main>
+
 <button 
   class="scroll-top" 
   title="Volver a Producción" 
@@ -83,10 +116,8 @@
   </svg>
 </button>
 
-
-  <footer>
-    <p>&copy; 2025 Marsal Studio<br>
-      Sitio Web Creado y proporcionado por Erick Emilio Cisneros Marsal</p>
+  <footer class="text-center py-3">
+    <p>&copy; 2025 Marsal Studio<br />Sitio Web Creado y proporcionado por Erick Emilio Cisneros Marsal</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

@@ -7,8 +7,8 @@
   <title>Producción | Marsal Studio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Servicios */
+<style>
+      /* Servicios */
     .service h2 a {
       color: #6d90ff;
       text-decoration: none;
@@ -20,48 +20,56 @@
       color: white;
       outline: none;
     }
-    .hero {
-  background-image: url('https://www.avisualpro.es/wp-content/uploads/2022/11/blog-produccion.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-background-attachment: fixed;
-  width: 100%;
-  min-height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  padding: 2rem;
-  position: relative;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4); /* Oscurece para mejor contraste */
-  z-index: 1;
-}
-
-.hero > * {
-  position: relative;
-  z-index: 2;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .hero {
-    min-height: 25vh; /* mejor usar min-height para que no se corte si hay contenido */
-    background-position: top center; /* para que enfoque mejor en móviles */
+  .hero-produccion {
+    min-height: 100vh;
+    background-image: url('https://www.avisualpro.es/wp-content/uploads/2022/11/blog-produccion.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-light);
+    padding: 3rem 2rem;
+    position: relative;
+    z-index: 1;
   }
-  .service {
-    max-width: 100%;  
+
+  .hero-produccion::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: -1;
   }
-}
-  </style>
+
+  .hero-produccion .titulo {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: var(--accent-blue);
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.8);
+  }
+
+  .hero-produccion .subtitulo {
+    font-size: clamp(1rem, 3vw, 1.6rem);
+    color: var(--text-soft);
+    font-weight: 300;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+  }
+
+  @media (max-width: 768px) {
+    .hero-produccion {
+      min-height: 50vh;
+      background-position: top center;
+      padding: 2rem 1rem;
+    }
+  }
+</style>
+
 </head>
 
 <body class="bould-font">
@@ -94,10 +102,10 @@ background-attachment: fixed;
   </header>
 
   <main>
-    <section class="hero" role="banner" aria-label="Sección principal de Producción Audiovisual">
-      <h1>Producción Audiovisual</h1>
-      <p>Transformamos ideas en imágenes con calidad cinematográfica.</p>
-    </section>
+<section class="hero-produccion" role="banner" aria-label="Sección principal de Producción Audiovisual">
+  <h1 class="titulo">Producción Audiovisual</h1>
+  <p class="subtitulo">Transformamos ideas en imágenes con calidad cinematográfica.</p>
+</section>
 
     <section class="services container my-5 d-flex flex-wrap justify-content-center gap-4" aria-label="Servicios de Producción Audiovisual">
       <article class="service p-4 rounded shadow-sm" tabindex="0">

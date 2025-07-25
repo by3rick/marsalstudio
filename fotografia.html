@@ -8,205 +8,206 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <style>
-:root {
-  --marsal-dark: #17171C;
-  --marsal-red: #FF0808;
-  --text-light: #f1f1f1;
-  --accent-blue: #6d90ff;
-  --text-soft: #bbbbbb;
-  --text-muted: #c4c4c4;
-  --bg-soft: #222;
-  --bg-base: #111;
+    :root {
+      --marsal-dark: #17171C;
+      --marsal-red: #FF0808;
+      --text-light: #f1f1f1;
+      --accent-blue: #6d90ff;
+      --text-soft: #bbbbbb;
+      --text-muted: #c4c4c4;
+      --bg-soft: #222;
+      --bg-base: #111;
 
-  /* Extras por consistencia */
-  --bg-dark: var(--bg-base);
-  --nav-bg: var(--marsal-dark);
-  --card-bg: rgba(255, 255, 255, 0.03);
-  --card-border: rgba(255, 255, 255, 0.08);
-  --btn-red: var(--marsal-red);
-  --text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-}
+      /* Extras por consistencia */
+      --bg-dark: var(--bg-base);
+      --nav-bg: var(--marsal-dark);
+      --card-bg: rgba(255, 255, 255, 0.03);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --btn-red: var(--marsal-red);
+      --text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    }
 
-body {
-  background-color: var(--bg-dark);
-  color: var(--text-light);
-  font-family: 'Bould', sans-serif;
-  line-height: 1.6;
-  scroll-behavior: smooth;
-}
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      font-family: 'Bould', sans-serif;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
 
-.navbar {
-  background-color: var(--nav-bg);
-}
+    .navbar {
+      background-color: var(--nav-bg);
+    }
 
-.hero {
-  background-size: cover;
-  background-position: center;
-  height: 60vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: var(--text-light);
-  text-shadow: var(--text-shadow);
-  padding: 0 1rem;
-  text-align: center;
-}
+    .hero {
+      background-size: cover;
+      background-position: center;
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-shadow: var(--text-shadow);
+      padding: 0 1rem;
+      text-align: center;
+    }
 
-.hero h1 {
-  font-weight: 700;
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-}
+    .hero h1 {
+      font-weight: 700;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      color: var(--accent-blue);
+    }
 
-.hero p {
-  font-size: 1.25rem;
-  font-weight: 500;
-}
+    .hero p {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--text-light);
+    }
 
-.services {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  margin: 3rem auto;
-  max-width: 1200px;
-  padding: 0 1rem;
-}
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 3rem auto;
+      max-width: 1200px;
+      padding: 0 1rem;
+    }
 
-.service {
-  background: var(--card-bg);
-  border: 1.5px solid var(--card-border);
-  border-radius: 12px;
-  padding: 2rem 1.5rem;
-  flex: 1 1 250px;
-  max-width: 300px;
-  text-align: center;
-  backdrop-filter: blur(10px);
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
+    .service {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
+      flex: 1 1 250px;
+      max-width: 300px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
 
-.service:hover,
-.service:focus-within {
-  transform: translateY(-6px);
-  border-color: var(--btn-red);
-  box-shadow: 0 10px 20px rgba(255, 8, 8, 0.4);
-  outline: none;
-}
+    .service:hover,
+    .service:focus-within {
+      transform: translateY(-6px);
+      border-color: var(--btn-red);
+      box-shadow: 0 10px 20px rgba(255, 8, 8, 0.4);
+      outline: none;
+    }
 
-.service h2 a {
-  color: var(--accent-blue);
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1.5rem;
-  display: inline-block;
-  margin-bottom: 0.75rem;
-  transition: color 0.3s ease;
-}
+    .service h2 a {
+      color: var(--accent-blue);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.5rem;
+      display: inline-block;
+      margin-bottom: 0.75rem;
+      transition: color 0.3s ease;
+      pointer-events: none; /* Evita clicks duplicados porque el artículo es clickeable */
+    }
 
-.service h2 a:hover,
-.service h2 a:focus {
-  color: var(--btn-red);
-  outline: none;
-  text-decoration: underline;
-}
+    .service:hover h2 a,
+    .service:focus-within h2 a {
+      color: var(--btn-red);
+      text-decoration: underline;
+    }
 
-.gallery {
-  padding: 4rem 0;
-  background: var(--bg-soft);
-}
+    .gallery {
+      padding: 4rem 0;
+      background: var(--bg-soft);
+    }
 
-.gallery h2 {
-  color: var(--text-light);
-  text-align: center;
-  margin-bottom: 3rem;
-  font-weight: 700;
-  font-size: 2.5rem;
-}
+    .gallery h2 {
+      color: var(--text-light);
+      text-align: center;
+      margin-bottom: 3rem;
+      font-weight: 700;
+      font-size: 2.5rem;
+    }
 
-.gallery-item img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
+    .gallery-item img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
 
-.gallery-item img:hover,
-.gallery-item img:focus {
-  transform: scale(1.05);
-  outline: none;
-}
+    .gallery-item img:hover,
+    .gallery-item img:focus {
+      transform: scale(1.05);
+      outline: none;
+    }
 
-.gallery-text {
-  margin-top: 0.75rem;
-  text-align: center;
-}
+    .gallery-text {
+      margin-top: 0.75rem;
+      text-align: center;
+    }
 
-.gallery-text h5 {
-  font-weight: 700;
-  color: var(--text-light);
-  margin-bottom: 0.3rem;
-}
+    .gallery-text h5 {
+      font-weight: 700;
+      color: var(--text-light);
+      margin-bottom: 0.3rem;
+    }
 
-.gallery-text p {
-  font-size: 0.875rem;
-  color: var(--text-soft);
-  margin: 0;
-}
+    .gallery-text p {
+      font-size: 0.875rem;
+      color: var(--text-soft);
+      margin: 0;
+    }
 
-.quote-section {
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  padding: 6rem 1rem;
-  text-align: center;
-  color: var(--text-light);
-  font-size: 2rem;
-  font-weight: 700;
-  background-image: url('https://images.unsplash.com/photo-1488371934083-edb7857977df');
-  text-shadow: var(--text-shadow);
-  user-select: none;
-  letter-spacing: 1.2px;
-  max-width: 900px;
-  margin: 3rem auto;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
-}
+    .quote-section {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      padding: 6rem 1rem;
+      text-align: center;
+      color: var(--text-light);
+      font-size: 2rem;
+      font-weight: 700;
+      background-image: url('https://images.unsplash.com/photo-1488371934083-edb7857977df');
+      text-shadow: var(--text-shadow);
+      user-select: none;
+      letter-spacing: 1.2px;
+      max-width: 900px;
+      margin: 3rem auto;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    }
 
-footer {
-  background-color: var(--nav-bg);
-  color: var(--text-muted);
-  padding: 1.5rem 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-  user-select: none;
-}
+    footer {
+      background-color: var(--nav-bg);
+      color: var(--text-muted);
+      padding: 1.5rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      user-select: none;
+    }
 
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
 
-  .hero p {
-    font-size: 1rem;
-  }
+      .hero p {
+        font-size: 1rem;
+      }
 
-  .services {
-    gap: 1rem;
-  }
+      .services {
+        gap: 1rem;
+      }
 
-  .service {
-    max-width: 100%;
-  }
+      .service {
+        max-width: 100%;
+      }
 
-  .quote-section {
-    font-size: 1.5rem;
-    padding: 3rem 1rem;
-  }
-}
-
+      .quote-section {
+        font-size: 1.5rem;
+        padding: 3rem 1rem;
+      }
+    }
   </style>
 </head>
 
@@ -244,16 +245,16 @@ footer {
     </section>
 
     <section class="services container" aria-label="Servicios de fotografía">
-      <article class="service" tabindex="0">
-        <h2><a href="producto.html" class="text-decoration-none" tabindex="-1">Producto</a></h2>
+      <article class="service" tabindex="0" role="button" onclick="location.href='producto.html';" onkeypress="if(event.key==='Enter') location.href='producto.html';">
+        <h2><a href="producto.html" tabindex="-1">Producto</a></h2>
         <p>Fotografías limpias y creativas que destacan cada detalle de tus productos.</p>
       </article>
-      <article class="service" tabindex="0">
-        <h2><a href="moda.html" class="text-decoration-none" tabindex="-1">Moda y Modelaje</a></h2>
+      <article class="service" tabindex="0" role="button" onclick="location.href='moda.html';" onkeypress="if(event.key==='Enter') location.href='moda.html';">
+        <h2><a href="moda.html" tabindex="-1">Moda y Modelaje</a></h2>
         <p>Sesiones fotográficas con estilo profesional para catálogos, revistas y redes sociales.</p>
       </article>
-      <article class="service" tabindex="0">
-        <h2><a href="eventos.html" class="text-decoration-none" tabindex="-1">Eventos Empresariales</a></h2>
+      <article class="service" tabindex="0" role="button" onclick="location.href='eventos.html';" onkeypress="if(event.key==='Enter') location.href='eventos.html';">
+        <h2><a href="eventos.html" tabindex="-1">Eventos Empresariales</a></h2>
         <p>Capturamos momentos clave en eventos corporativos con estilo documental.</p>
       </article>
     </section>
@@ -264,8 +265,7 @@ footer {
         <div class="row g-4 justify-content-center">
           <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
             <div class="gallery-item w-100" tabindex="0" role="group" aria-label="Producto destacado">
-              <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=400&q=80"
-                alt="Producto destacado, fotografía limpia y detallada" />
+              <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=400&q=80" alt="Producto destacado, fotografía limpia y detallada" />
               <div class="gallery-text">
                 <h5>Producto destacado</h5>
                 <p>Fotografía limpia y detallada para tu producto.</p>
@@ -274,21 +274,19 @@ footer {
           </div>
           <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
             <div class="gallery-item w-100" tabindex="0" role="group" aria-label="Moda profesional">
-              <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=400&q=80"
-                alt="Modelo en sesión de moda profesional" />
+              <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=400&q=80" alt="Modelo en sesión de moda profesional" />
               <div class="gallery-text">
                 <h5>Moda profesional</h5>
-                <p>Estilo y elegancia para tu marca.</p>
+                <p>Sesión con estilo para catálogos y revistas.</p>
               </div>
             </div>
           </div>
           <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
-            <div class="gallery-item w-100" tabindex="0" role="group" aria-label="Evento empresarial">
-              <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=400&q=80"
-                alt="Evento empresarial capturado con estilo documental" />
+            <div class="gallery-item w-100" tabindex="0" role="group" aria-label="Evento empresarial capturado">
+              <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Fotografía documental de evento corporativo" />
               <div class="gallery-text">
                 <h5>Evento empresarial</h5>
-                <p>Momentos clave capturados profesionalmente.</p>
+                <p>Momentos clave capturados con estilo documental.</p>
               </div>
             </div>
           </div>
@@ -297,22 +295,11 @@ footer {
     </section>
   </main>
 
-  <button 
-  class="scroll-top" 
-  title="Volver a Inicio" 
-  aria-label="Volver a Inicio"
-  onclick="window.location.href='index.html'">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-    <path d="M15 19l-7-7 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-</button>
-
-  <footer class="bg-dark text-white text-center py-4 mt-5">
-    <p class="mb-0">&copy; 2025 Marsal Studio <br> Sitio Web creado y proporcionado por Erick Emilio Cisneros Marsal</p>
+  <footer>
+    &copy; 2025 Marsal Studio. Todos los derechos reservados.
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="site.js"></script>
 </body>
 
 </html>
