@@ -7,15 +7,102 @@
   <title>Moda y Modelaje | Marsal Studio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .hero-moda {
+      min-height: 100vh;
+      background: url('https://media.gq.com.mx/photos/6465537f27429b28ca35aa2d/4:3/w_1610,h_1207,c_limit/ropa-de-hombre-pasada-de-moda-en-look-para-cita-romantica.jpg') center/cover no-repeat fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: var(--text-light);
+      padding: 3rem 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-moda::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: -1;
+    }
+
+    .hero-moda h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      color: var(--accent-blue);
+      font-weight: 700;
+      text-shadow: 0 3px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    .hero-moda p {
+      font-size: clamp(1rem, 3vw, 1.6rem);
+      color: var(--text-soft);
+      font-weight: 300;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    .service {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 1rem;
+      color: var(--text-soft);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+  .service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(109, 144, 255, 0.5);
+    }
+
+    .service h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--accent-blue);
+      text-transform: uppercase;
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      color: var(--text-soft);
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: 0.95rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    footer a {
+      color: var(--accent-blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+      color: var(--accent-red);
+      text-shadow: 0 0 4px var(--accent-red);
+    }
+      .gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+      }
+  </style>
 </head>
 
-<body class="bould-font">
+<body class="bould-font bg-base text-light">
 
+  <!-- NAVBAR -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3" aria-label="Navegación principal">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
       <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <img src="https://scontent.fpbc5-1.fna.fbcdn.net/v/t39.30808-6/519505898_705288845836185_1023547191803377491_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ZH0Vfo6Ui5AQ7kNvwFGnpT5&_nc_oc=Adk4vWSyMOlOiMPDVk2oVEhT3B-w8l-Ch3TMmT0KnA3QQD2WnmyxMR7LV8WnF2jEvmj9c9SbJl3FW21CRDEYAMxR&_nc_zt=23&_nc_ht=scontent.fpbc5-1.fna&_nc_gid=p74RzI6UUuuTdujgXiSUUw&oh=00_AfS5pgxUbQOvmYrEihe1D-lR5oHdQJ8IU3nS9X0Sov1LtA&oe=6881DCBA" alt="Logo Marsal Studio" height="40" class="me-2" />
+          <img src="imagenes/logo blanco.jpg" alt="Logo Marsal Studio" height="40" class="me-2" />
           Marsal Studio
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -33,63 +120,77 @@
     </nav>
   </header>
 
-  <section class="hero text-center text-white d-flex flex-column justify-content-center align-items-center"
-    style="background-image: url('https://images.unsplash.com/photo-1520975611424-6ca0c2c34c1b'); height: 60vh; background-size: cover; background-position: center;">
-    <h1 class="display-4 fw-bold text-shadow">Moda y Modelaje</h1>
-    <p class="lead text-shadow">Fotografía con estilo, actitud y mucha presencia.</p>
+  <!-- HERO -->
+  <section class="hero-moda">
+    <h1>Moda y Modelaje</h1>
+    <p>Fotografía con estilo, actitud y mucha presencia.</p>
   </section>
 
-  <main class="container my-5 glass-section">
-    <section class="mb-5">
-      <h2 class="h4 text-uppercase">Capturamos la esencia de tu marca</h2>
-      <p>En Marsal Studio entendemos que la fotografía de moda es mucho más que una simple imagen: es una declaración visual. Trabajamos con modelos, maquillistas, diseñadores y marcas para crear composiciones potentes que reflejan identidad, actitud y profesionalismo.</p>
-    </section>
+  <!-- SECCIONES DE SERVICIO -->
+  <main class="container my-5">
+    <section class="services d-flex flex-wrap justify-content-center gap-4 py-5">
+      <article class="service text-center p-4" style="max-width: 380px;">
+        <h2 class="mb-3">Capturamos la esencia de tu marca</h2>
+        <p>
+          En Marsal Studio entendemos que la fotografía de moda es mucho más que una simple imagen:
+          es una declaración visual. Trabajamos con modelos, maquillistas, diseñadores y marcas para
+          crear composiciones potentes que reflejan identidad, actitud y profesionalismo.
+        </p>
+      </article>
 
-    <section class="mb-5">
-      <h2 class="h4 text-uppercase">¿Qué incluye nuestro servicio?</h2>
-      <ul>
-        <li>Dirección artística y estilismo.</li>
-        <li>Locaciones interiores o exteriores.</li>
-        <li>Coordinación con modelos y agencias.</li>
-        <li>Edición avanzada para resaltar la estética de cada sesión.</li>
-      </ul>
-    </section>
+      <article class="service text-center p-4" style="max-width: 380px;">
+        <h2 class="mb-3">¿Qué incluye nuestro servicio?</h2>
+        <ul class="text-start ps-3">
+          <li>Dirección artística y estilismo.</li>
+          <li>Locaciones interiores o exteriores.</li>
+          <li>Coordinación con modelos y agencias.</li>
+          <li>Edición avanzada para resaltar la estética de cada sesión.</li>
+        </ul>
+      </article>
 
-    <section class="mb-5">
-      <h2 class="h4 text-uppercase">Para redes, catálogos y pasarelas</h2>
-      <p>Ofrecemos contenido visual impactante para marcas de ropa, diseñadores, modelos e influencers. Creamos imágenes con estilo editorial y profesional, ideales para campañas de moda, lookbooks y branding personal.</p>
+      <article class="service text-center p-4" style="max-width: 380px;">
+        <h2 class="mb-3">Para redes, catálogos y pasarelas</h2>
+        <p>
+          Ofrecemos contenido visual impactante para marcas de ropa, diseñadores, modelos e influencers.
+          Creamos imágenes con estilo editorial y profesional, ideales para campañas de moda, lookbooks y branding personal.
+        </p>
+      </article>
     </section>
-
+<!-- GALERÍA -->
     <section>
-      <h2 class="h4 text-uppercase">Galería de moda</h2>
+      <h2 class="h4 text-uppercase text-accent mb-4 text-center">Galería de moda</h2>
       <div class="row g-4">
         <div class="col-md-4">
-          <img src="https://images.unsplash.com/photo-1498486488401-778c8b0f2932" class="img-fluid rounded shadow"
+          <img src="https://audaces.com/wp-content/uploads/2022/03/editorial-moda-1536x864-1.jpg" class="img-fluid rounded shadow"
             alt="Editorial de moda en estudio" loading="lazy" />
         </div>
         <div class="col-md-4">
-          <img src="https://images.unsplash.com/photo-1613417602371-58a47f1b8aa1" class="img-fluid rounded shadow"
-            alt="Modelaje urbano en exteriores" loading="lazy" />
+          <img src="https://cdn1.creacionesmaylin.com/24600-large_default/vestido-de-confirmacion-modelo-evelyn.jpg" class="img-fluid rounded shadow"
+            alt="Moda modelo con vestido" loading="lazy" />
         </div>
         <div class="col-md-4">
-          <img src="https://images.unsplash.com/photo-1613470208960-92ac248ff405" class="img-fluid rounded shadow"
-            alt="Campaña de moda femenina" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded shadow"
+            alt="Pasarela de moda" loading="lazy" />
         </div>
       </div>
     </section>
   </main>
 
-  <button class="scroll-top" title="Volver a Fotografía" aria-label="Volver a Fotografía" 
+  <!-- BOTÓN VOLVER -->
+  <button class="scroll-top" title="Volver a Fotografía" aria-label="Volver a Fotografía"
     onclick="window.location.href='fotografia.html'">
     <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-      <path d="M15 19l-7-7 7-7" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M15 19l-7-7 7-7" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"
+        stroke-linejoin="round" />
     </svg>
   </button>
 
-  <footer id="footer" class="fade-target bg-dark text-white text-center py-4">
-    <p class="mb-0">&copy; 2025 Marsal Studio <br /> Sitio Web Creado y proporcionado por Erick Emilio Cisneros Marsal</p>
+  <!-- FOOTER -->
+  <footer>
+    <p class="mb-0">&copy; 2025 Marsal Studio <br /> Sitio Web creado y proporcionado por Erick Emilio Cisneros Marsal</p>
   </footer>
 
+  <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="site.js"></script>
 </body>

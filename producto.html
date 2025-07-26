@@ -7,15 +7,112 @@
   <title>Fotografía de Producto | Marsal Studio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .hero-producto {
+      min-height: 100vh;
+      background-image: url('https://kioskobox.com/wp-content/uploads/2024/01/hacer-buenas-fotografias-con-el-movil-.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: var(--text-light);
+      padding: 3rem 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-producto::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: -1;
+    }
+
+    .hero-producto h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      color: var(--accent-blue);
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-shadow: 0 3px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    .hero-producto p {
+      font-size: clamp(1rem, 3vw, 1.6rem);
+      color: var(--text-soft);
+      font-weight: 300;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    @media (max-width: 768px) {
+      .hero-producto {
+        min-height: 60vh;
+        background-position: top center;
+        padding: 2rem 1rem;
+      }
+    }
+    footer {
+  background: rgba(0, 0, 0, 0.6); /* efecto semi-transparente tipo glass */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* para Safari */
+  color: var(--text-soft);
+  text-align: center;
+  padding: 2rem 1.5rem;
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.5);
+}
+
+footer a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: var(--accent-red);
+  text-shadow: 0 0 4px var(--accent-red);
+}
+.service {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  color: var(--text-soft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.service h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+  text-transform: uppercase;
+}
+
+
+  </style>
 </head>
 
-<body class="bould-font">
+<body class="bould-fontt">
 
+  <!-- NAVBAR -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3" aria-label="Navegación principal">
+    <nav class="navbar navbar-expand-lg navbar-dark px-3">
       <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <img src="https://scontent.fpbc5-1.fna.fbcdn.net/v/t39.30808-6/519505898_705288845836185_1023547191803377491_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ZH0Vfo6Ui5AQ7kNvwFGnpT5&_nc_oc=Adk4vWSyMOlOiMPDVk2oVEhT3B-w8l-Ch3TMmT0KnA3QQD2WnmyxMR7LV8WnF2jEvmj9c9SbJl3FW21CRDEYAMxR&_nc_zt=23&_nc_ht=scontent.fpbc5-1.fna&_nc_gid=p74RzI6UUuuTdujgXiSUUw&oh=00_AfS5pgxUbQOvmYrEihe1D-lR5oHdQJ8IU3nS9X0Sov1LtA&oe=6881DCBA" alt="Logo Marsal Studio" height="40" class="me-2" />
+          <img src="imagenes/logo blanco.jpg" alt="Logo Marsal Studio" height="40" class="me-2" />
           Marsal Studio
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -33,65 +130,73 @@
     </nav>
   </header>
 
-  <section class="hero text-center text-white d-flex flex-column justify-content-center align-items-center"
-    style="background-image: url('https://images.unsplash.com/photo-1600185365483-26d7aa59f5a4'); height: 60vh; background-size: cover; background-position: center;">
-    <h1 class="display-4 fw-bold">Fotografía de Producto</h1>
-    <p class="lead">Haz que cada detalle de tu producto cuente.</p>
+  <!-- HERO -->
+  <section class="hero-producto">
+    <h1>Fotografía de Producto</h1>
+    <p>Haz que cada detalle de tu producto cuente.</p>
   </section>
 
-  <main class="container my-5">
-    <section aria-labelledby="que-es-fotografia" class="mb-5">
-      <h2 id="que-es-fotografia" class="h4 text-uppercase">¿Qué es la fotografía de producto?</h2>
-      <p>Es una herramienta visual estratégica para presentar tus artículos con la mejor cara posible. Una imagen impactante puede hacer la diferencia entre vender o pasar desapercibido. Nosotros creamos esa diferencia.</p>
-    </section>
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="container py-5">
+<section class="services d-flex flex-wrap justify-content-center gap-4 py-5">
+  <article class="service text-center p-4 shadow rounded" style="max-width: 380px;">
+    <h2 class="text-accent mb-3">¿Qué es la fotografía de producto?</h2>
+    <p>
+      Es una herramienta visual estratégica para presentar tus artículos con la mejor cara posible.
+      Una imagen impactante puede hacer la diferencia entre vender o pasar desapercibido.
+      Nosotros creamos esa diferencia.
+    </p>
+  </article>
 
-    <section aria-labelledby="que-ofrecemos" class="mb-5">
-      <h2 id="que-ofrecemos" class="h4 text-uppercase">¿Qué ofrecemos?</h2>
-      <ul>
-        <li>Fotografías de estudio con fondos blancos o creativos.</li>
-        <li>Iluminación que resalta texturas y formas.</li>
-        <li>Retoque profesional: limpieza, colores, sombras y más.</li>
-        <li>Entrega optimizada para redes sociales, ecommerce y más.</li>
-      </ul>
-    </section>
+  <article class="service text-center p-4 shadow rounded" style="max-width: 380px;">
+    <h2 class="text-accent mb-3">¿Qué ofrecemos?</h2>
+    <ul class="text-start ps-3">
+      <li>Fotografías de estudio con fondos blancos o creativos.</li>
+      <li>Iluminación que resalta texturas y formas.</li>
+      <li>Retoque profesional: limpieza, colores, sombras y más.</li>
+      <li>Entrega optimizada para redes sociales, ecommerce y más.</li>
+    </ul>
+  </article>
 
-    <section aria-labelledby="por-que-elegirnos" class="mb-5">
-      <h2 id="por-que-elegirnos" class="h4 text-uppercase">¿Por qué elegirnos?</h2>
-      <p>Porque no hacemos fotos genéricas. Pensamos cada toma desde la perspectiva de marca, marketing y estética. Tus productos no solo se verán bien, van a destacar y a generar interés real.</p>
-    </section>
+  <article class="service text-center p-4 shadow rounded" style="max-width: 380px;">
+    <h2 class="text-accent mb-3">¿Por qué elegirnos?</h2>
+    <p>
+      No hacemos fotos genéricas. Pensamos cada toma desde la perspectiva de marca, marketing y estética.
+      Tus productos no solo se verán bien, van a destacar y a generar interés real.
+    </p>
+  </article>
+</section>
+
 
     <section aria-labelledby="ejemplos">
-      <h2 id="ejemplos" class="h4 text-uppercase">Ejemplos</h2>
+      <h2 id="ejemplos" class="h4 text-uppercase text-accent">Ejemplos</h2>
       <div class="row g-4">
-        <article class="col-md-4" aria-label="Ejemplo de reloj de lujo">
+        <article class="col-md-4">
           <figure>
-            <img src="https://images.unsplash.com/photo-1564869734860-de57a74433b3" class="img-fluid rounded shadow"
-              alt="Reloj de lujo" loading="lazy" />
-            <figcaption class="gallery-text">
-              <h5>Reloj de lujo</h5>
-              <p class="small">Elegancia, precisión y detalle.</p>
+            <img src="https://scontent.fpbc5-1.fna.fbcdn.net/v/t39.30808-6/518375253_122243335532018838_8903299699623894421_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=csfpEuGHmW0Q7kNvwGLsYji&_nc_oc=AdlXngqurQXLU-G_Atem0tFMTg-KLRuYhyq-A0AXCSetfhiO8LAAMrTFruvVA3Nz5I9hCgBXsOsfxpl10nKDHxJM&_nc_zt=23&_nc_ht=scontent.fpbc5-1.fna&_nc_gid=PGmH9FXRWlJ5TRiW3spxsA&oh=00_AfSnymdi9jorsd4iPrisc7ci4F3EGo8dUsp3qruymOWnVQ&oe=6889D062" class="img-fluid rounded shadow" alt="Producto: Mole Dulce Almendrado" loading="lazy" />
+            <figcaption>
+              <h5 class="mt-2">Mole Dulce Almendrado</h5>
+              <p class="small text-muted">Una delicia para tu paladar.</p>
             </figcaption>
           </figure>
         </article>
 
-        <article class="col-md-4" aria-label="Ejemplo de zapatillas deportivas">
+        <article class="col-md-4">
           <figure>
-            <img src="https://images.unsplash.com/photo-1587815071744-4b3b00ef3f86" class="img-fluid rounded shadow"
-              alt="Zapatillas deportivas" loading="lazy" />
-            <figcaption class="gallery-text">
-              <h5>Zapatillas deportivas</h5>
-              <p class="small">Estilo, comodidad y performance.</p>
+            <img src="https://ae-pic-a1.aliexpress-media.com/kf/S09c40f561e5649198487d351f3fbc12di.jpg" class="img-fluid rounded shadow" alt="Zapatillas deportivas" loading="lazy" />
+            <figcaption>
+              <h5 class="mt-2">Zapatillas deportivas</h5>
+              <p class="small text-muted">Estilo, comodidad y performance.</p>
             </figcaption>
           </figure>
         </article>
 
-        <article class="col-md-4" aria-label="Ejemplo de botella de perfume">
+        <article class="col-md-4">
           <figure>
-            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" class="img-fluid rounded shadow"
-              alt="Botella de perfume" loading="lazy" />
-            <figcaption class="gallery-text">
-              <h5>Botella de perfume</h5>
-              <p class="small">Fragancia que habla por sí sola.</p>
+            <img src="https://i.pinimg.com/474x/ca/b4/a1/cab4a1b7b02e6f5f410b414924379a7e.jpg" class="img-fluid rounded shadow" alt="Botella de perfume elegante" loading="lazy" />
+            <figcaption>
+              <h5 class="mt-2">Botella de perfume</h5>
+              <p class="small text-muted">Fragancia que habla por sí sola.</p>
             </figcaption>
           </figure>
         </article>
@@ -99,17 +204,21 @@
     </section>
   </main>
 
-<button class="scroll-top" title="Volver a Fotografía" aria-label="Volver a Fotografía" 
-  onclick="window.location.href='fotografia.html'">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-    <path d="M15 19l-7-7 7-7" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-</button>
+  <!-- BOTÓN FLOTANTE -->
+  <button class="scroll-top" type="button" title="Volver a Fotografía" aria-label="Volver a Fotografía"
+    onclick="window.location.href='fotografia.html'">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="24" height="24">
+      <path d="M15 19l-7-7 7-7" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </svg>
+  </button>
 
-  <footer class="bg-dark text-white text-center py-4 mt-5">
-    <p class="mb-0">&copy; 2025 Marsal Studio <br> Sitio Web creado y proporcionado por Erick Emilio Cisneros Marsal</p>
-  </footer>
+  <!-- FOOTER -->
+<footer>
+  <p>&copy; 2025 Marsal Studio<br>Sitio Web creado y proporcionado por Erick Emilio Cisneros Marsal</p>
+</footer>
 
+  <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="site.js"></script>
 </body>
