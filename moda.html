@@ -4,13 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Moda y Modelaje | Marsal Studio</title>
+  <title>Alimentos y Comida | Marsal Studio</title>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+
   <style>
     .hero-moda {
       min-height: 100vh;
-      background: url('https://media.gq.com.mx/photos/6465537f27429b28ca35aa2d/4:3/w_1610,h_1207,c_limit/ropa-de-hombre-pasada-de-moda-en-look-para-cita-romantica.jpg') center/cover no-repeat fixed;
+      background: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1') center/cover no-repeat fixed;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -26,13 +28,13 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.55);
+      background: rgba(0, 0, 0, 0.6);
       z-index: -1;
     }
 
     .hero-moda h1 {
       font-size: clamp(2.5rem, 6vw, 4rem);
-      color: var(--accent-blue);
+      color: var(--accent-red);
       font-weight: 700;
       text-shadow: 0 3px 8px rgba(0, 0, 0, 0.8);
     }
@@ -53,16 +55,9 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-  .service:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(109, 144, 255, 0.5);
-    }
-
-    .service h2 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--accent-blue);
-      text-transform: uppercase;
+    .service:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(255, 90, 90, 0.5);
     }
 
     footer {
@@ -73,25 +68,7 @@
       padding: 2rem 1.5rem;
       font-size: 0.95rem;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.5);
     }
-
-    footer a {
-      color: var(--accent-blue);
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-      color: var(--accent-red);
-      text-shadow: 0 0 4px var(--accent-red);
-    }
-      .gallery-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
-      }
   </style>
 </head>
 
@@ -105,14 +82,14 @@
           <img src="imagenes/logo blanco.jpg" alt="Logo Marsal Studio" height="40" class="me-2" />
           Marsal Studio
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link btn" href="index.html">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link btn" href="fotografia.html">Fotografía</a></li>
+            <li class="nav-item"><a class="nav-link btn" href="produccion.html">Producción</a></li>
             <li class="nav-item"><a class="nav-link btn" href="index.html#contacto">Contacto</a></li>
           </ul>
         </div>
@@ -122,75 +99,58 @@
 
   <!-- HERO -->
   <section class="hero-moda">
-    <h1>Moda y Modelaje</h1>
-    <p>Fotografía con estilo, actitud y mucha presencia.</p>
+    <h1>Alimentos y Comida</h1>
+    <p>Fotografía que despierta el hambre y vende sin decir una palabra.</p>
   </section>
 
-  <!-- SECCIONES DE SERVICIO -->
-  <main class="container my-5">
-    <section class="services d-flex flex-wrap justify-content-center gap-4 py-5">
-      <article class="service text-center p-4" style="max-width: 380px;">
-        <h2 class="mb-3">Capturamos la esencia de tu marca</h2>
-        <p>
-          En Marsal Studio entendemos que la fotografía de moda es mucho más que una simple imagen:
-          es una declaración visual. Trabajamos con modelos, maquillistas, diseñadores y marcas para
-          crear composiciones potentes que reflejan identidad, actitud y profesionalismo.
-        </p>
-      </article>
+  <!-- SERVICIOS -->
+  <section class="services d-flex flex-wrap justify-content-center gap-4 py-5">
+    <article class="service text-center p-4" style="max-width: 380px;">
+      <h2 class="mb-3">Imágenes que abren el apetito</h2>
+      <p>
+        La fotografía gastronómica no es solo mostrar un plato, es provocar deseo.
+        Capturamos texturas, colores y detalles que hacen que tu comida se antoje antes del primer bocado.
+      </p>
+    </article>
 
-      <article class="service text-center p-4" style="max-width: 380px;">
-        <h2 class="mb-3">¿Qué incluye nuestro servicio?</h2>
-        <ul class="text-start ps-3">
-          <li>Dirección artística y estilismo.</li>
-          <li>Locaciones interiores o exteriores.</li>
-          <li>Coordinación con modelos y agencias.</li>
-          <li>Edición avanzada para resaltar la estética de cada sesión.</li>
-        </ul>
-      </article>
+    <article class="service text-center p-4" style="max-width: 380px;">
+      <h2 class="mb-3">¿Qué incluye el servicio?</h2>
+      <ul class="text-start ps-3">
+        <li>Dirección visual y estilismo gastronómico.</li>
+        <li>Iluminación profesional para alimentos.</li>
+        <li>Fotografía para menús, redes y publicidad.</li>
+        <li>Edición cuidada sin perder lo natural.</li>
+      </ul>
+    </article>
 
-      <article class="service text-center p-4" style="max-width: 380px;">
-        <h2 class="mb-3">Para redes, catálogos y pasarelas</h2>
-        <p>
-          Ofrecemos contenido visual impactante para marcas de ropa, diseñadores, modelos e influencers.
-          Creamos imágenes con estilo editorial y profesional, ideales para campañas de moda, lookbooks y branding personal.
-        </p>
-      </article>
-    </section>
-<!-- GALERÍA -->
-    <section>
-      <h2 class="h4 text-uppercase text-accent mb-4 text-center">Galería de moda</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <img src="imagenes/mimo.jpg" class="img-fluid rounded shadow"
-            alt="Editorial de moda en estudio" loading="lazy" />
-        </div>
-        <div class="col-md-4">
-          <img src="https://cdn1.creacionesmaylin.com/24600-large_default/vestido-de-confirmacion-modelo-evelyn.jpg" class="img-fluid rounded shadow"
-            alt="Moda modelo con vestido" loading="lazy" />
-        </div>
-        <div class="col-md-4">
-          <img src="imagenes/monstruo2.jpg" class="img-fluid rounded shadow"
-            alt="Pasarela de moda" loading="lazy" />
-        </div>
+    <article class="service text-center p-4" style="max-width: 380px;">
+      <h2 class="mb-3">Ideal para marcas y restaurantes</h2>
+      <p>
+        Trabajamos con restaurantes, cafeterías y marcas de alimentos que buscan destacar.
+        Creamos contenido visual pensado para vender, no solo para verse bonito.
+      </p>
+    </article>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="container mb-5">
+    <h2 class="h4 text-uppercase mb-4 text-center">Galería gastronómica</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <img src="imagenes/pizaa.jpg"
+          class="img-fluid rounded shadow" alt="Fotografía de hamburguesa" loading="lazy" />
       </div>
-    </section>
-  </main>
+      <div class="col-md-4">
+        <img src="imagenes/pinolero.jpg"
+          class="img-fluid rounded shadow" alt="Fotografía de pasta" loading="lazy" />
+      </div>
+      <div class="col-md-4">
+        <img src="imagenes/platillo.jpg"
+          class="img-fluid rounded shadow" alt="Fotografía de postre" loading="lazy" />
+      </div>
+    </div>
+  </section>
 
-  <!-- BOTÓN VOLVER -->
-  <button class="scroll-top" title="Volver a Fotografía" aria-label="Volver a Fotografía"
-    onclick="window.location.href='fotografia.html'">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-      <path d="M15 19l-7-7 7-7" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"
-        stroke-linejoin="round" />
-    </svg>
-  </button>
-
-  <!-- FOOTER -->
-  <footer>
-    <p class="mb-0">&copy; 2025 Marsal Studio <br /> Sitio Web creado y proporcionado por Erick Emilio Cisneros Marsal</p>
-  </footer>
-
-  <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="site.js"></script>
 </body>
