@@ -47,6 +47,32 @@
   font-weight: 300;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
 }
+.demo-video {
+  max-width: 900px;
+  margin: 4rem auto;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.2rem;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  aspect-ratio: 16 / 9;   /* 🔑 CLAVE */
+}
+
+.demo-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* video bien encuadrado */
+  display: block;
+}
+
+
+.demo-video .caption {
+  padding: 1.2rem;
+  text-align: center;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+}
   </style>
 </head>
 
@@ -102,6 +128,16 @@
         </article>
       </div>
     </section>
+    <section class="demo-video" aria-label="Muestra de video corporativo">
+  
+  <!-- GIF de muestra (luego lo cambias por tu video real) -->
+<video autoplay muted loop playsinline>
+  <source src="videos/corpo.mp4" type="video/mp4">
+</video>
+
+
+</section>
+
   </main>
 
 <button 
