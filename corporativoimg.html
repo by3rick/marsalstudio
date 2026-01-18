@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fotografías Corporativas | Marsal Studio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+.hero-corporativo {
+  min-height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem;
+  text-align: center;
+  position: relative;
+  color: var(--text-light);
+  z-index: 1;
+}
+
+.hero-corporativo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+.hero-corporativo .titulo {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--accent-blue);
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.85);
+}
+
+.hero-corporativo .subtitulo {
+  font-size: clamp(1rem, 3vw, 1.6rem);
+  color: var(--text-soft);
+  font-weight: 300;
+  max-width: 900px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+  </style>
+</head>
+
+<body class="bould-font">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3" aria-label="Navegación principal">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="imagenes/logo blanco.jpg" alt="Logo Marsal Studio" height="40" class="me-2" />
+          Marsal Studio
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link btn" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link btn" href="fotografia.html">Fotografía</a></li>
+            <li class="nav-item"><a class="nav-link btn" href="index.html#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="flex-grow-1">
+    <section class="hero-corporativo">
+      <h1 class="titulo">Fotografías Corporativas</h1>
+      <p class="subtitulo">La imagen profesional que tu empresa necesita para comunicar confianza, liderazgo y solidez.</p>
+    </section>
+
+    <section class="services container my-5">
+      <div class="row text-center g-4">
+        <article class="col-md-4 service">
+          <h2 class="h4 mb-3">¿Qué es?</h2>
+          <p>Fotografía profesional enfocada en retratar equipos, espacios y procesos empresariales con una estética limpia y estratégica.</p>
+        </article>
+        <article class="col-md-4 service">
+          <h2 class="h4 mb-3">Proceso</h2>
+          <p>Planeación visual, scouting de locación, sesión dirigida, iluminación profesional y retoque cuidando identidad de marca.</p>
+        </article>
+        <article class="col-md-4 service">
+          <h2 class="h4 mb-3">Ideal para</h2>
+          <p>Páginas web, LinkedIn, reportes anuales, presentaciones corporativas y material institucional.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <button 
+    class="scroll-top" 
+    title="Volver a Fotografía" 
+    aria-label="Volver a Fotografía"
+    onclick="window.location.href='fotografia.html'">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+      <path d="M15 19l-7-7 7-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <footer>
+    <p>&copy; 2025 Marsal Studio<br />Sitio Web creado y proporcionado por Erick Emilio Cisneros Marsal</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="site.js"></script>
+</body>
+
+</html>
